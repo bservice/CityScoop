@@ -41,6 +41,8 @@ public class PickUp : MonoBehaviour
                     //Collision!
                     //Add to inventory
                     inventory.AddItem(name);
+                    Destroy(this);
+                    Destroy(gameObject);
                 }
             }
         }
