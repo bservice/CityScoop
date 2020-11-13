@@ -44,10 +44,24 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    //Add item to list
     public void AddItem(PickUp item)
     {
         inventory.Add(item);
     }
+
+    public void  RemoveItem(PickUp item)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if(inventory[i].Name == item.Name)
+            {
+                inventory.RemoveAt(i);
+            }
+        }       
+    }
+
+    //Remove item from list
 
     public void DisplayItem(PickUp item, float x, int index)
     {
