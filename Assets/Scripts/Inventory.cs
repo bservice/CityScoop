@@ -5,7 +5,12 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     private Inventory[] inventories;
-    private List<string> inventory;
+    public List<PickUp> inventory;
+
+    private float invX;
+    private float invY;
+
+    private bool once;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +23,11 @@ public class Inventory : MonoBehaviour
             Destroy(inventories[1].gameObject);
         }
 
+        invX = -1.323f;
+        invY = -0.973f;
+
+        once = false;
+
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
     }
@@ -25,11 +35,23 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (inventory.Count > 0)
+        {
+            for (int i = 0; i < inventory.Count; i++)
+            {
+                DisplayItem(inventory[i], invX, i);
+            }
+        }
     }
 
-    public void AddItem(string item)
+    public void AddItem(PickUp item)
     {
         inventory.Add(item);
+    }
+
+    public void DisplayItem(PickUp item, float x, int index)
+    {
+        x += 0.366f * (float)index;
+        item.transform.position = new Vector2(x, invY);
     }
 }

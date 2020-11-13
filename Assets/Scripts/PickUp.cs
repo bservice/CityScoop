@@ -9,6 +9,11 @@ public class PickUp : MonoBehaviour
 
     Vector2 cursorPosition;
 
+    public string Name
+    {
+        get { return name; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +23,7 @@ public class PickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CheckForClick();
     }
 
     //Method to check for click
@@ -40,9 +45,8 @@ public class PickUp : MonoBehaviour
                 {
                     //Collision!
                     //Add to inventory
-                    inventory.AddItem(name);
-                    Destroy(this);
-                    Destroy(gameObject);
+                    inventory.AddItem(this);
+                    transform.position = new Vector2(100.0f, 100.0f);
                 }
             }
         }
