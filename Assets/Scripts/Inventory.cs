@@ -42,18 +42,40 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (prevCount != inventory.Count)
+        if (inventory.Count > 0)
         {
-            if (inventory.Count > 0)
+            if (prevCount != inventory.Count)
             {
                 if(inventory.Count > 8)
                 {
-                    rowCount++;
+                    //If the inventory goes to the next row, run two loops for each row
+                    for (int i = 0; i < 8; i++)
+                    {
+                        DisplayItem(inventory[i], invX, invY, i);
+                    }
+                    for (int i = 8; i < inventory.Count; i++)
+                    {
+                        //Set new x and y for the lower row
+                        float x = -1.689f;
+                        float y = -1.146f;
+                        //Rowcount serves as "i"
+                        //Only used because i does not start at 0
+                        rowCount++;
+                        DisplayItem(inventory[i], x, y, rowCount);
+                    }
+                    //Reset row count
+                    rowCount = 0;
                 }
-                for(int i  = 0; i < inventory.Count; i++)
+                else
                 {
-                    DisplayItem(inventory[i], invX, invY, i);
-                }
+                    //if there is only one row, display as normal
+                    invX = -1.323f;
+                    invY = -0.788f;
+                    for (int i = 0; i < inventory.Count; i++)
+                    {
+                        DisplayItem(inventory[i], invX, invY, i);
+                    }
+                }                
             }
         }
 
@@ -68,7 +90,6 @@ public class Inventory : MonoBehaviour
 
     public void  RemoveItem(PickUp item)
     {
-        rowCount--;
         for (int i = 0; i < inventory.Count; i++)
         {
             if(inventory[i].Name == item.Name)
@@ -84,15 +105,6 @@ public class Inventory : MonoBehaviour
     {
         //Display at the x value according to the index of where it is in the list
         x += 0.366f * (float)index;
-
-        //If the index is higher than 8, go to new row and reset x 
-        if(index > 7)
-        {
-            y = -1.146f;
-            x = -1.323f;
-            int count = inventory.Count - 1;
-            x -= 0.366f * (float)(index - count);            
-        }
 
         //Display the item
         item.transform.position = new Vector2(x, y);
