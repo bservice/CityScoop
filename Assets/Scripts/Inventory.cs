@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
     private float invY;
 
     private bool once;
+    private bool once2;
 
     private int prevCount;
     private int rowCount;
@@ -32,6 +33,7 @@ public class Inventory : MonoBehaviour
         rowCount = 0;
 
         once = false;
+        once2 = true;
 
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
@@ -44,8 +46,14 @@ public class Inventory : MonoBehaviour
         {
             if (inventory.Count > 0)
             {
-                Debug.Log("display");
-                DisplayItem(inventory[inventory.Count - 1], invX, invY, inventory.Count - 1);                
+                if(inventory.Count > 8)
+                {
+                    rowCount++;
+                }
+                for(int i  = 0; i < inventory.Count; i++)
+                {
+                    DisplayItem(inventory[i], invX, invY, i);
+                }
             }
         }
 
@@ -60,6 +68,7 @@ public class Inventory : MonoBehaviour
 
     public void  RemoveItem(PickUp item)
     {
+        rowCount--;
         for (int i = 0; i < inventory.Count; i++)
         {
             if(inventory[i].Name == item.Name)
@@ -82,11 +91,7 @@ public class Inventory : MonoBehaviour
             y = -1.146f;
             x = -1.323f;
             int count = inventory.Count - 1;
-            //index = index - count;
-            //newIndex--;
-            //Debug.Log(newIndex);
-            x += 0.366f * (float)(index - count + rowCount);
-            rowCount++;
+            x -= 0.366f * (float)(index - count);            
         }
 
         //Display the item
