@@ -12,6 +12,9 @@ public class Inventory : MonoBehaviour
 
     private bool once;
 
+    private int prevCount;
+    private int rowCount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +27,9 @@ public class Inventory : MonoBehaviour
         }
 
         invX = -1.323f;
-        invY = -0.973f;
+        invY = -0.788f;
+
+        rowCount = 0;
 
         once = false;
 
@@ -35,13 +40,16 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inventory.Count > 0)
+        if (prevCount != inventory.Count)
         {
-            for (int i = 0; i < inventory.Count; i++)
+            if (inventory.Count > 0)
             {
-                DisplayItem(inventory[i], invX, i);
+                Debug.Log("display");
+                DisplayItem(inventory[inventory.Count - 1], invX, invY, inventory.Count - 1);                
             }
         }
+
+        prevCount = inventory.Count;
     }
 
     //Add item to list
@@ -63,9 +71,25 @@ public class Inventory : MonoBehaviour
 
     //Remove item from list
 
-    public void DisplayItem(PickUp item, float x, int index)
+    public void DisplayItem(PickUp item, float x, float y, int index)
     {
+        //Display at the x value according to the index of where it is in the list
         x += 0.366f * (float)index;
-        item.transform.position = new Vector2(x, invY);
+
+        //If the index is higher than 8, go to new row and reset x 
+        if(index > 7)
+        {
+            y = -1.146f;
+            x = -1.323f;
+            int count = inventory.Count - 1;
+            //index = index - count;
+            //newIndex--;
+            //Debug.Log(newIndex);
+            x += 0.366f * (float)(index - count + rowCount);
+            rowCount++;
+        }
+
+        //Display the item
+        item.transform.position = new Vector2(x, y);
     }
 }
