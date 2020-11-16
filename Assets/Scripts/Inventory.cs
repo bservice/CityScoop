@@ -6,7 +6,7 @@ public class Inventory : MonoBehaviour
 {
     private Inventory[] inventories;
     public List<PickUp> inventory;
-    private List<PickUp> inventory2;
+    private PickUp[] items;
 
     private float invX;
     private float invY;
@@ -30,6 +30,8 @@ public class Inventory : MonoBehaviour
 
         rowCount = 0;
 
+        items = FindObjectsOfType<PickUp>();
+
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
     }
@@ -39,6 +41,8 @@ public class Inventory : MonoBehaviour
     {
         if (inventory.Count > 0)
         {
+            items = FindObjectsOfType<PickUp>();
+            CheckForDuplicates();
             if (prevCount != inventory.Count)
             {
                 if(inventory.Count > 8)
@@ -89,6 +93,7 @@ public class Inventory : MonoBehaviour
         {
             if(inventory[i].Name == item.Name)
             {
+                inventory[i].Added = false;
                 inventory.RemoveAt(i);
             }
         }       
@@ -105,11 +110,35 @@ public class Inventory : MonoBehaviour
         item.transform.position = new Vector2(x, y);
     }
 
+    //Save items in the inventory so they traverse the scenes
     public void SaveList()
     {
         for (int i = 0; i < inventory.Count; i++)
         {
             DontDestroyOnLoad(inventory[i]);
+        }
+    }
+
+    //Check if there are duplicate items
+    public void CheckForDuplicates()
+    {
+        //Loop through all items on the scene
+        for (int i = 0; i < items.Length; i++)
+        {
+            //Continue if item is not added
+            if (!items[i].Added)
+            {
+                //Check all of the items in the inventory
+                for (int j = 0; j < inventory.Count; j++)
+                {
+                    //If the item is not added and is in the inventory, it is a duplicate
+                    if (inventory[j].Name == items[i].Name)
+                    {
+                        //Destroy duplicate
+                        Destroy(items[i].gameObject);
+                    }
+                }
+            }
         }
     }
 }

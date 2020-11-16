@@ -11,11 +11,20 @@ public class PickUp : MonoBehaviour
 
     private bool added;
 
-    private PauseTest pauseMenu;
+    private PauseTest pauseMenu;    
 
     public string Name
     {
         get { return name; }
+    }
+
+    public bool Added
+    {
+        get { return added; }
+        set
+        {
+            added = value;
+        }
     }
 
     // Start is called before the first frame update
