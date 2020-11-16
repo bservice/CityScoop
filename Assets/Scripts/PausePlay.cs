@@ -10,9 +10,6 @@ public class PausePlay : MonoBehaviour
     Vector2 cursorPosition;
 
     private AudioSource soundEffect;
-    public AudioClip button;
-
-    private float timeLeft;
 
     public bool Clicked
     {
@@ -38,7 +35,6 @@ public class PausePlay : MonoBehaviour
         clicked = false;
         clicked2 = false;
         soundEffect = GetComponent<AudioSource>();
-        timeLeft = 0.1f;
     }
 
     // Update is called once per frame

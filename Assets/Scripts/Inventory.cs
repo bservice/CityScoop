@@ -10,9 +10,6 @@ public class Inventory : MonoBehaviour
     private float invX;
     private float invY;
 
-    private bool once;
-    private bool once2;
-
     private int prevCount;
     private int rowCount;
 
@@ -31,9 +28,6 @@ public class Inventory : MonoBehaviour
         invY = -0.788f;
 
         rowCount = 0;
-
-        once = false;
-        once2 = true;
 
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
