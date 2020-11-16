@@ -70,11 +70,10 @@ public class Inventory : MonoBehaviour
                     {
                         DisplayItem(inventory[i], invX, invY, i);
                     }
-                }                
+                }
+                SaveList();
             }
         }
-
-        SaveList();
         prevCount = inventory.Count;
     }
 
