@@ -6,6 +6,7 @@ public class Inventory : MonoBehaviour
 {
     private Inventory[] inventories;
     public List<PickUp> inventory;
+    private List<PickUp> removedInventory;
     private PickUp[] items;
 
     private float invX;
@@ -31,6 +32,8 @@ public class Inventory : MonoBehaviour
         rowCount = 0;
 
         items = FindObjectsOfType<PickUp>();
+
+        removedInventory = new List<PickUp>();
 
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
@@ -94,6 +97,7 @@ public class Inventory : MonoBehaviour
             if(inventory[i].Name == item.Name)
             {
                 inventory[i].Added = false;
+                removedInventory.Add(inventory[i]);
                 inventory.RemoveAt(i);
             }
         }       
@@ -136,6 +140,20 @@ public class Inventory : MonoBehaviour
                     {
                         //Destroy duplicate
                         Destroy(items[i].gameObject);
+                    }
+                }
+                //If the item is not added and the removed inventory list has at least one thing inside of it, continue check
+                if(removedInventory.Count > 0)
+                {
+                    //Check all of the items in the removed items inventory
+                    for (int j = 0; j < removedInventory.Count; j++)
+                    {
+                        //If the item is not added and is in the removed inventory, it is a duplicate
+                        if (removedInventory[j].Name == items[i].Name)
+                        {
+                            //Destroy duplicate
+                            Destroy(items[i].gameObject);
+                        }
                     }
                 }
             }
