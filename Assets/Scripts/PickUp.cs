@@ -11,6 +11,8 @@ public class PickUp : MonoBehaviour
 
     private bool added;
 
+    private PauseTest pauseMenu;
+
     public string Name
     {
         get { return name; }
@@ -20,13 +22,17 @@ public class PickUp : MonoBehaviour
     void Start()
     {
         inventory = FindObjectOfType<Inventory>();
+        pauseMenu = FindObjectOfType<PauseTest>();
         added = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckForClick();
+        if (!pauseMenu.Paused)
+        {
+            CheckForClick();
+        }
     }
 
     //Method to check for click

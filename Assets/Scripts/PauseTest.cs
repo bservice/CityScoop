@@ -45,7 +45,7 @@ public class PauseTest : MonoBehaviour
             if(exitButton.GetComponent<PausePlay>().Clicked)
             {
                 exitButton.GetComponent<PausePlay>().Clicked = false;
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("MainMenu");
             }
         }
         else
