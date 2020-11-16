@@ -6,6 +6,7 @@ public class Inventory : MonoBehaviour
 {
     private Inventory[] inventories;
     public List<PickUp> inventory;
+    private List<PickUp> inventory2;
 
     private float invX;
     private float invY;
@@ -73,6 +74,7 @@ public class Inventory : MonoBehaviour
             }
         }
 
+        SaveList();
         prevCount = inventory.Count;
     }
 
@@ -102,5 +104,13 @@ public class Inventory : MonoBehaviour
 
         //Display the item
         item.transform.position = new Vector2(x, y);
+    }
+
+    public void SaveList()
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            DontDestroyOnLoad(inventory[i]);
+        }
     }
 }
