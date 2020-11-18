@@ -15,6 +15,11 @@ public class Inventory : MonoBehaviour
     private int prevCount;
     private int rowCount;
 
+    public int Count
+    {
+        get { return inventory.Count; }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

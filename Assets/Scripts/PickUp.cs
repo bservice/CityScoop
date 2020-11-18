@@ -71,9 +71,13 @@ public class PickUp : MonoBehaviour
                     }
                     else
                     {
-                        //Add to inventory
-                        inventory.AddItem(this);
-                        added = true;
+                        //Checking to make sure the inventory isn't full
+                        if (inventory.Count < 16)
+                        {
+                            //Add to inventory
+                            inventory.AddItem(this);
+                            added = true;
+                        }
                     }                    
                 }
             }
