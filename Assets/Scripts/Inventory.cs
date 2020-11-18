@@ -164,4 +164,32 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    //Returns an item in the inventory if the player has it
+    public PickUp GetItemByName(string name)
+    {
+        for(int i = 0; i < inventory.Count; i++)
+        {
+            if(name == inventory[i].Name)
+            {
+                return inventory[i];
+            }
+        }
+
+        return null;
+    }
+
+    //Returns true or false depending on if you have an item or not
+    public bool HaveItem(string name)
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (name == inventory[i].Name)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
