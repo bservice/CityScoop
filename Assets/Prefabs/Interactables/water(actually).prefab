@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3956775012010694963
+--- !u!1 &3206805141014351668
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2519205473439166261}
-  - component: {fileID: 2041569638970641917}
-  - component: {fileID: 708653543157814444}
-  - component: {fileID: 2322100157049867925}
+  - component: {fileID: 3206805141014351667}
+  - component: {fileID: 3206805141014351666}
+  - component: {fileID: 3206805141014351669}
+  - component: {fileID: 4262162481725020364}
   m_Layer: 0
-  m_Name: water
+  m_Name: water(actually)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2519205473439166261
+--- !u!4 &3206805141014351667
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3956775012010694963}
+  m_GameObject: {fileID: 3206805141014351668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3232135, y: -0.26130587, z: 0}
+  m_LocalPosition: {x: 0.9047228, y: 0.07109973, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2041569638970641917
+--- !u!212 &3206805141014351666
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3956775012010694963}
+  m_GameObject: {fileID: 3206805141014351668}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 42f50319ba26b1549a6e8fb77548aca2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3001efdee4b24664e974054e62030904, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,33 +84,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &708653543157814444
+--- !u!114 &3206805141014351669
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3956775012010694963}
+  m_GameObject: {fileID: 3206805141014351668}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65b28bf31e5ac3148a166b1a3afba2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Water Sludge
---- !u!61 &2322100157049867925
+  name: Water
+--- !u!61 &4262162481725020364
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3956775012010694963}
+  m_GameObject: {fileID: 3206805141014351668}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009845912, y: -0.0039389133}
+  m_Offset: {x: 0.0008942187, y: 0.0017887056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -121,5 +121,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12702072, y: 0.24910027}
+  m_Size: {x: 0.117903054, y: 0.21983254}
   m_EdgeRadius: 0
