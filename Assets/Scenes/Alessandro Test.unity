@@ -961,6 +961,7 @@ MonoBehaviour:
     name: Victoria
     sentences:
     - Just a normal baseball, but it could be useful...
+    - I'll take it.
 --- !u!1 &486437055
 GameObject:
   m_ObjectHideFlags: 0
