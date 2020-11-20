@@ -5,7 +5,7 @@ using UnityEngine;
 public class LookableManager : MonoBehaviour
 {
     // The list of all lookable objects.
-    private Lookable[] lookables;
+    public Lookable[] lookables;
     // Whether or not the cursor is over a lookable object.
     public bool isHovered = false;
 

@@ -12,9 +12,16 @@ public class DialogueManager : MonoBehaviour
 
     // Animates the Text-box
     public Animator animator;
+    // Animates Vic
+    public Animator animatorVic;
+    private bool mouthOpen = false;
+    public GameObject mouthClosed;
 
     // The Inventory
     private Inventory inv;
+
+    // All of the lookable objects
+    private LookableManager look;
 
     // Cursor Controls
     public Texture2D cursorTexture;
@@ -29,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         inv = FindObjectOfType<Inventory>();
+        look = FindObjectOfType<LookableManager>();
         inDialogue = false;
     }
 
@@ -52,7 +60,13 @@ public class DialogueManager : MonoBehaviour
             p.GetComponent<SpriteRenderer>().enabled = false;
         }
 
+        foreach(Lookable l in look.lookables)
+        {
+            l.GetComponent<BoxCollider2D>().enabled = false;
+        }
+
         animator.SetBool("IsOpen", true);
+        animatorVic.SetBool("IsIn", true);
 
         nameText.text = dialogue.name;
 
@@ -84,19 +98,32 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
+            mouthClosed.SetActive(!mouthOpen);
+            mouthOpen = !mouthOpen;
             dialogueText.text += letter;
             yield return null;
         }
+        mouthOpen = false;
+        mouthClosed.SetActive(true);
     }
 
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        animatorVic.SetBool("IsIn", false);
+
         foreach (PickUp p in inv.inventory)
         {
             p.GetComponent<SpriteRenderer>().enabled = true;
         }
 
+        foreach (Lookable l in look.lookables)
+        {
+            l.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
+        mouthOpen = false;
+        mouthClosed.SetActive(true);
         // Dialogue done.
         inDialogue = false;
     }
