@@ -32,7 +32,8 @@ public class Inventory : MonoBehaviour
         }
 
         invX = -1.323f;
-        invY = -0.788f;
+        //invY = -0.788f;
+        invY = -5.0f;
 
         rowCount = 0;
 
@@ -64,7 +65,8 @@ public class Inventory : MonoBehaviour
                     {
                         //Set new x and y for the lower row
                         float x = -1.689f;
-                        float y = -1.146f;
+                        //float y = -1.146f;
+                        float y = -1.346f;
                         //Rowcount serves as "i"
                         //Only used because i does not start at 0
                         rowCount++;
@@ -77,7 +79,8 @@ public class Inventory : MonoBehaviour
                 {
                     //if there is only one row, display as normal
                     invX = -1.323f;
-                    invY = -0.788f;
+                    //invY = -0.788f;
+                    invY = -0.988f;
                     for (int i = 0; i < inventory.Count; i++)
                     {
                         DisplayItem(inventory[i], invX, invY, i);

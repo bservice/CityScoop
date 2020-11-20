@@ -83,4 +83,14 @@ public class PickUp : MonoBehaviour
             }
         }
     }
+
+    // Triggers dialogue about the pickup.
+    public void OnMouseDown()
+    {
+        if(!added)
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<DialogueTrigger>().TriggerDialogue();
+        }
+    }
 }
