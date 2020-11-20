@@ -1820,7 +1820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0053a51437949444a1e8a7533b364d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Demo Three
+  sceneName: DemoThree
 --- !u!212 &1735969582
 SpriteRenderer:
   m_ObjectHideFlags: 0
