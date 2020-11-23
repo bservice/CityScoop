@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Final Scenes/MainMenu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/BrandonTests.unity
@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Alessandro Test.unity
     guid: d5a18a2e608167147bd53aefc379f173
+  - enabled: 1
+    path: Assets/Scenes/DemoThree.unity
+    guid: aba9b7c7182084f458eda2a98365a633
+  - enabled: 1
+    path: Assets/Scenes/DemoTwo.unity
+    guid: c9c857370b742b141aaec3f41a090d44
   m_configObjects: {}
