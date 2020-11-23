@@ -195,4 +195,13 @@ public class Inventory : MonoBehaviour
 
         return false;
     }
+
+    //To combine items
+    void CombineItems(PickUp obj1, PickUp obj2, PickUp newObj)
+    {
+
+        RemoveItem(obj1);
+        RemoveItem(obj2);
+        AddItem(newObj);
+    }
 }

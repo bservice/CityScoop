@@ -99,8 +99,14 @@ public class PickUp : MonoBehaviour
     }
 
     //To pull an item from your inventory to use or of the ground
-    public void UseItem(Vector2 target)
+    public void UseItem(Vector2 target, string tag)
     {
+        //Validating item
+        if (this.tag != tag)
+        {
+            return;
+        }
+
         //To store the mouses position
         Vector2 locationOfMouse = Input.mousePosition;
 
@@ -111,6 +117,35 @@ public class PickUp : MonoBehaviour
 
             //to see if the item is near the target zone
             if (Vector2.Distance(this.transform.position, target) <= 2.0f)
+            {
+                //Do something with the target zone and/or the object in use
+            }
+        }
+    }
+
+    //To pull an item from your inventory to use or of the ground using tags
+    public void UseItem(string tag)
+    {
+        //Validating item
+        if(this.tag != tag)
+        {
+            return;
+        }
+
+        //To store the mouses position
+        Vector2 locationOfMouse = Input.mousePosition;
+
+        //To get an item with the desired tag
+        GameObject taggedItem;
+        taggedItem = GameObject.FindWithTag(tag);
+
+        //To see if they are clicking if so have that object follow the cursor
+        if (this.CheckForClick())
+        {
+            this.transform.position = locationOfMouse;
+
+            //to see if the item is near the target zone
+            if (Vector2.Distance(this.transform.position, taggedItem.transform.position) <= 2.0f)
             {
                 //Do something with the target zone and/or the object in use
             }

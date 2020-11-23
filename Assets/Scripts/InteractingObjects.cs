@@ -47,4 +47,9 @@ public class InteractingObjects : MonoBehaviour
             }
         }
     }
+
+    void ReleaseItem()
+    {
+
+    }
 }
