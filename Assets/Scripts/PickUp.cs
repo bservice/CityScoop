@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
     public string name;
     private Inventory inventory;
+    public InteractingObjects interObjRef;
 
     Vector2 cursorPosition;
 
@@ -45,7 +46,7 @@ public class PickUp : MonoBehaviour
     }
 
     //Method to check for click
-    public void CheckForClick()
+    public bool CheckForClick()
     {
         //Grab vector2 for cursor to use in AABB math
         cursorPosition = Input.mousePosition;
@@ -67,6 +68,7 @@ public class PickUp : MonoBehaviour
                     if(added)
                     {
                         transform.position = new Vector2(100.0f, 100.0f);
+                        interObjRef.Temp = this;
                         inventory.RemoveItem(this);
                     }
                     else
@@ -78,10 +80,12 @@ public class PickUp : MonoBehaviour
                             inventory.AddItem(this);
                             added = true;
                         }
-                    }                    
+                    }
+                    return true;
                 }
             }
         }
+        return false;
     }
 
     // Triggers dialogue about the pickup.
@@ -91,6 +95,25 @@ public class PickUp : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<DialogueTrigger>().TriggerDialogue();
+        }
+    }
+
+    //To pull an item from your inventory to use or of the ground
+    public void UseItem(Vector2 target)
+    {
+        //To store the mouses position
+        Vector2 locationOfMouse = Input.mousePosition;
+
+        //To see if they are clicking if so have that object follow the cursor
+        if (this.CheckForClick())
+        {
+            this.transform.position = locationOfMouse;
+
+            //to see if the item is near the target zone
+            if (Vector2.Distance(this.transform.position, target) <= 2.0f)
+            {
+                //Do something with the target zone and/or the object in use
+            }
         }
     }
 }
