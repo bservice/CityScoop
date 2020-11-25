@@ -72,7 +72,8 @@ public class PickUp : MonoBehaviour
                     if(added)
                     {
                         transform.position = new Vector2(100.0f, 100.0f);
-                        interObjRef.Temp = this;
+                        if(interObjRef != null)
+                            interObjRef.Temp = this;
                         inventory.RemoveItem(this);
                     }
                     else
