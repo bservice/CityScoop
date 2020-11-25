@@ -12,7 +12,9 @@ public class PickUp : MonoBehaviour
 
     private bool added;
 
-    private PauseTest pauseMenu;    
+    private PauseTest pauseMenu;
+
+    private AudioSource soundEffect;
 
     public string Name
     {
@@ -34,6 +36,7 @@ public class PickUp : MonoBehaviour
         inventory = FindObjectOfType<Inventory>();
         pauseMenu = FindObjectOfType<PauseTest>();
         added = false;
+        soundEffect = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -79,6 +82,7 @@ public class PickUp : MonoBehaviour
                             //Add to inventory
                             inventory.AddItem(this);
                             added = true;
+                            soundEffect.PlayOneShot(soundEffect.clip);
                         }
                     }
                     return true;
