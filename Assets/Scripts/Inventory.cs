@@ -6,7 +6,7 @@ public class Inventory : MonoBehaviour
 {
     private Inventory[] inventories;
     public List<PickUp> inventory;
-    private List<PickUp> removedInventory;
+    public List<string> removedInventory;
     private PickUp[] items;
 
     private float invX;
@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour
 
         items = FindObjectsOfType<PickUp>();
 
-        removedInventory = new List<PickUp>();
+        removedInventory = new List<string>();
 
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
@@ -48,10 +48,10 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        items = FindObjectsOfType<PickUp>();
+        CheckForDuplicates();
         if (inventory.Count > 0)
-        {
-            items = FindObjectsOfType<PickUp>();
-            CheckForDuplicates();
+        {            
             if (prevCount != inventory.Count)
             {
                 if(inventory.Count > 8)
@@ -98,6 +98,7 @@ public class Inventory : MonoBehaviour
         inventory.Add(item);
     }
 
+    //Remove item from list
     public void  RemoveItem(PickUp item)
     {
         for (int i = 0; i < inventory.Count; i++)
@@ -105,13 +106,11 @@ public class Inventory : MonoBehaviour
             if(inventory[i].Name == item.Name)
             {
                 inventory[i].Added = false;
-                removedInventory.Add(inventory[i]);
+                removedInventory.Add(inventory[i].Name);
                 inventory.RemoveAt(i);
             }
         }       
-    }
-
-    //Remove item from list
+    }    
 
     public void DisplayItem(PickUp item, float x, float y, int index)
     {
@@ -125,9 +124,12 @@ public class Inventory : MonoBehaviour
     //Save items in the inventory so they traverse the scenes
     public void SaveList()
     {
-        for (int i = 0; i < inventory.Count; i++)
+        if (inventory.Count > 0)
         {
-            DontDestroyOnLoad(inventory[i]);
+            for (int i = 0; i < inventory.Count; i++)
+            {
+                DontDestroyOnLoad(inventory[i]);
+            }
         }
     }
 
@@ -157,7 +159,7 @@ public class Inventory : MonoBehaviour
                     for (int j = 0; j < removedInventory.Count; j++)
                     {
                         //If the item is not added and is in the removed inventory, it is a duplicate
-                        if (removedInventory[j].Name == items[i].Name)
+                        if (removedInventory[j] == items[i].Name)
                         {
                             //Destroy duplicate
                             Destroy(items[i].gameObject);
