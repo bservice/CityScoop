@@ -19,6 +19,11 @@ public class Button : MonoBehaviour
             clicked = value;
         }
     }
+
+    public string Scene
+    {
+        get { return sceneName; }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -50,7 +55,7 @@ public class Button : MonoBehaviour
                     //Collision!
                     gameObject.GetComponent<SpriteRenderer>().color = new Color(210f / 255f, 198f / 255f, 140f / 255f);
                     clicked = true;
-                    SceneManager.LoadScene(sceneName);
+                    //SceneManager.LoadScene(sceneName);
                 }
             }
         }

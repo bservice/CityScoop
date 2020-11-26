@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ButtonAudioManager : MonoBehaviour
 {
     //Arrays to hold the buttons
-    private Button[] sceneButtons;
+    public Button[] sceneButtons;
     private PausePlay[] pauseButtons;
 
     //Array to hold the managers, this will be used to keep it at one
@@ -28,7 +28,7 @@ public class ButtonAudioManager : MonoBehaviour
         }
 
         //Don't let it get destroyed, unless there is more than one which is handled above
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(this);
 
         //Find the initial buttons
         sceneButtons = FindObjectsOfType<Button>();
@@ -42,8 +42,8 @@ public class ButtonAudioManager : MonoBehaviour
     void Update()
     {
         //Only loop through scenes that are not the game scene (the game scene won't have any of this type of button)
-        if(SceneManager.GetActiveScene().name != "BrandonTests")
-        {
+        //if (SceneManager.GetActiveScene().name != "BrandonTests")
+        //{
             //Keep finding all of the buttons in the scene
             sceneButtons = FindObjectsOfType<Button>();
 
@@ -52,14 +52,17 @@ public class ButtonAudioManager : MonoBehaviour
             {
                 if (sceneButtons[i].Clicked)
                 {
+                    Debug.Log("scene button");
                     soundEffect.PlayOneShot(button);
                     sceneButtons[i].Clicked = false;
+
+                    //SceneManager.LoadScene(sceneButtons[i].Scene);
                 }
             }
-        }
-        //Only check for pause buttons in the game scene
-        else
-        {
+
+            //Only check for pause buttons in the game scene
+
+            
             //Keep finding all of the buttons in the scene
             pauseButtons = FindObjectsOfType<PausePlay>();
 
@@ -72,6 +75,7 @@ public class ButtonAudioManager : MonoBehaviour
                     //pauseButtons[i].Clicked2 = false;
                 }
             }
-        }
+        //}
+        
     }
 }

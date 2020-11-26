@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0053a51437949444a1e8a7533b364d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: BrandonTests
+  sceneName: Alessandro Test
 --- !u!212 &324409847
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
+  removedInventory: []
 --- !u!4 &409797409
 Transform:
   m_ObjectHideFlags: 0
@@ -417,7 +418,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6307dafa66c83ce45ae4cfdcaf41ee0d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.215
+  m_Volume: 0.108
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -653,4 +654,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c8c6b3bc8e01fb44a55c2c1e32214b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneButtons: []
   button: {fileID: 8300000, guid: 8d1378cb044ed434d831945b78f49e1c, type: 3}
