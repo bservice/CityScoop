@@ -15,6 +15,7 @@ public class ButtonAudioManager : MonoBehaviour
     //Hold the audio info
     private AudioSource soundEffect;
     public AudioClip button;
+    public AudioClip walk;
 
     // Start is called before the first frame update
     void Start()
@@ -51,12 +52,19 @@ public class ButtonAudioManager : MonoBehaviour
             for (int i = 0; i < sceneButtons.Length; i++)
             {
                 if (sceneButtons[i].Clicked)
-                {
-                    Debug.Log("scene button");
-                    soundEffect.PlayOneShot(button);
+                {                    
                     sceneButtons[i].Clicked = false;
 
-                    //SceneManager.LoadScene(sceneButtons[i].Scene);
+                if(sceneButtons[i].Walk)
+                {
+                    soundEffect.PlayOneShot(walk);
+                }
+                else
+                {
+                    soundEffect.PlayOneShot(button);
+                }
+
+                    SceneManager.LoadScene(sceneButtons[i].Scene);
                 }
             }
 

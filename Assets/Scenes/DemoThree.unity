@@ -764,6 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneButtons: []
   button: {fileID: 8300000, guid: 8d1378cb044ed434d831945b78f49e1c, type: 3}
+  walk: {fileID: 8300000, guid: 7b57e9549953aa14bb361903517e0754, type: 3}
 --- !u!82 &401867691
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1552,6 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0053a51437949444a1e8a7533b364d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkButton: 0
   sceneName: BrandonTests
 --- !u!212 &1095201213
 SpriteRenderer:

@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0053a51437949444a1e8a7533b364d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkButton: 1
   sceneName: DemoThree
 --- !u!61 &3398861572116441744
 BoxCollider2D:

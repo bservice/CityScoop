@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Button : MonoBehaviour
 {
     private bool clicked;
+    public bool walkButton;
 
     Vector2 cursorPosition;
 
@@ -18,6 +19,11 @@ public class Button : MonoBehaviour
         {
             clicked = value;
         }
+    }
+
+    public bool Walk
+    {
+        get { return walkButton; }
     }
 
     public string Scene
