@@ -28,6 +28,9 @@ public class DialogueManager : MonoBehaviour
     public CursorMode cursorMode = CursorMode.ForceSoftware;
     public Vector2 hotSpot = Vector2.zero;
 
+    //Pause menu
+    public PauseTest pauseMenu;
+
     // Whether or not dialogue is happening...
     public bool inDialogue;
 
@@ -42,55 +45,64 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if(inDialogue)
+        if (!pauseMenu.Paused)
         {
-            // Changes the cursor to the dialogue one.
-            Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+            if (inDialogue)
+            {
+                // Changes the cursor to the dialogue one.
+                Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+            }
         }
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        // It's dialogue time.
-        inDialogue = true;
-
-        // Makes inventory items invisible when the text-box pops up.
-        foreach (PickUp p in inv.inventory)
+        if (!pauseMenu.Paused)
         {
-            p.GetComponent<SpriteRenderer>().enabled = false;
+            // It's dialogue time.
+            inDialogue = true;
+
+            // Makes inventory items invisible when the text-box pops up.
+            foreach (PickUp p in inv.inventory)
+            {
+                p.GetComponent<SpriteRenderer>().enabled = false;
+            }
+
+            foreach (Lookable l in look.lookables)
+            {
+                l.GetComponent<BoxCollider2D>().enabled = false;
+            }
+
+            animator.SetBool("IsOpen", true);
+            animatorVic.SetBool("IsIn", true);
+
+            nameText.text = dialogue.name;
+
+            sentences.Clear();
+
+            foreach (string sentence in dialogue.sentences)
+            {
+                sentences.Enqueue(sentence);
+            }
+
+            DisplayNextSentence();
         }
-
-        foreach(Lookable l in look.lookables)
-        {
-            l.GetComponent<BoxCollider2D>().enabled = false;
-        }
-
-        animator.SetBool("IsOpen", true);
-        animatorVic.SetBool("IsIn", true);
-
-        nameText.text = dialogue.name;
-
-        sentences.Clear();
-
-        foreach(string sentence in dialogue.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
-
-        DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        if(sentences.Count == 0)
+        if (!pauseMenu.Paused)
         {
-            EndDialogue();
-            return;
-        }
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+                return;
+            }
 
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+            string sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
     }
 
     IEnumerator TypeSentence(string sentence)

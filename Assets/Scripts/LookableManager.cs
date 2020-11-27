@@ -15,6 +15,9 @@ public class LookableManager : MonoBehaviour
     public CursorMode cursorMode = CursorMode.ForceSoftware;
     public Vector2 hotSpot = Vector2.zero;
 
+    //Pause menu
+    public PauseTest pauseMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,14 +38,17 @@ public class LookableManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach(Lookable l in lookables)
+        if (!pauseMenu.Paused)
         {
-            if (l.isHovered = true)
+            foreach (Lookable l in lookables)
             {
-                Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
-                return;
+                if (l.isHovered = true)
+                {
+                    Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
+                    return;
+                }
             }
+            Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
         }
-        Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
     }
 }
