@@ -1666,17 +1666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    names:
-    - Boss
-    - Victoria
-    - Victoria
-    - Victoria
-    - Boss
-    - Victoria
-    - Boss
-    - Victoria
-    - Boss
-    - Boss
+    names: []
     sentences:
     - Sleeping on the job again, Miss Turry?
     - ...
@@ -1690,9 +1680,7 @@ MonoBehaviour:
     - Great! Let's go to Central Pizza. Meet me there in half an hour, and don't
       forget your reporter ID this time.
     - Sounds like a plan.
-    people:
-    - {fileID: 1151153038}
-    - {fileID: 2007653800}
+    people: []
 --- !u!114 &1339449417
 MonoBehaviour:
   m_ObjectHideFlags: 0
