@@ -45,7 +45,7 @@ public class PickUp : MonoBehaviour
         if (!pauseMenu.Paused)
         {
             CheckForClick();
-            UseItem("Target");
+            UseItem("Soda","Target");
         }
     }
 
@@ -138,13 +138,8 @@ public class PickUp : MonoBehaviour
     }
 
     //To pull an item from your inventory to use or of the ground using tags
-    public void UseItem(string tag)
+    public void UseItem(string itemTag, string targetTag)
     {
-        //Validating item
-        if (this.tag != tag)
-        {
-            //return;
-        }
         if(!inventory.HaveItem(this.name))
         {
             //Debug.Log("HIT return");
@@ -159,20 +154,8 @@ public class PickUp : MonoBehaviour
 
         //To get an item with the desired tag
         GameObject taggedItem;
-        taggedItem = GameObject.FindWithTag(tag);
+        taggedItem = GameObject.FindWithTag(targetTag);
 
-        //To see if they are clicking if so have that object follow the cursor
-        //if (this.CheckForClick())
-        //{
-        //    this.transform.position = locationOfMouse;
-        //
-        //    //to see if the item is near the target zone
-        //    if (Vector2.Distance(this.transform.position, taggedItem.transform.position) <= 2.0f)
-        //    {
-        //        //Do something with the target zone and/or the object in use
-        //        Debug.Log("HIT ZONE");
-        //    }
-        //}
         //Selection for objects
         if (Input.GetMouseButton(1))
         {
@@ -189,6 +172,12 @@ public class PickUp : MonoBehaviour
                     //to see if the item is near the target zone
                     if (Vector2.Distance(this.transform.position, taggedItem.transform.position) <= 0.2f)
                     {
+                        //Validating item
+                        if (this.tag != itemTag)
+                        {
+                            Debug.Log("HIT RETURN: " + this.tag + " " + itemTag);
+                            return;
+                        }
                         //Do something with the target zone and/or the object in use
                         Debug.Log("HIT ZONE");
                     }
