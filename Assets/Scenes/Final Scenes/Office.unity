@@ -699,7 +699,8 @@ MonoBehaviour:
     - Victoria
     - Victoria
     sentences:
-    - A pair of executive scissors.
+    - Scissors with rounded tips. Good for children's art projects. It wouldn't make
+      a good weapon, though you can't think of why you'd really need one.
     - I'll take it.
     people: []
 --- !u!1 &546407348
@@ -1563,7 +1564,8 @@ MonoBehaviour:
     - Victoria
     - Victoria
     sentences:
-    - My Reporter ID.
+    - The badge that lets people know you're a reporter. You can't remember the last
+      time anyone cared.
     - I'll take it.
     people: []
 --- !u!1 &1339449413
@@ -1577,8 +1579,8 @@ GameObject:
   - component: {fileID: 1339449415}
   - component: {fileID: 1339449414}
   - component: {fileID: 1339449418}
-  - component: {fileID: 1339449416}
   - component: {fileID: 1339449417}
+  - component: {fileID: 1339449416}
   m_Layer: 0
   m_Name: BossWorld
   m_TagString: Untagged
@@ -1667,13 +1669,27 @@ MonoBehaviour:
     names:
     - Boss
     - Victoria
+    - Victoria
+    - Victoria
+    - Boss
+    - Victoria
+    - Boss
+    - Victoria
     - Boss
     - Boss
     sentences:
     - Sleeping on the job again, Miss Turry?
-    - Huh, what?
-    - '*Sigh* Meet me at the pizzeria, there''s something strange happening there...'
-    - Oh, and don't forget your ID!
+    - ...
+    - ?!
+    - Uh... sorry, I...
+    - Come on! Aren't you excited about your new report?
+    - What, is it another lost dog or 'top ten manholes'? The most interesting interview
+      I've had was with a woman and her favorite subway rat.
+    - Even better! How about I tell you over lunch?"
+    - ...Sure.
+    - Great! Let's go to Central Pizza. Meet me there in half an hour, and don't
+      forget your reporter ID this time.
+    - Sounds like a plan.
     people:
     - {fileID: 1151153038}
     - {fileID: 2007653800}
