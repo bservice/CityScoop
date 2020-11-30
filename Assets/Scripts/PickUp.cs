@@ -149,53 +149,7 @@ public class PickUp : MonoBehaviour
                             return;
                         }
                         //Do something with the target zone and/or the object in use
-                        switch (itemTag)
-                        {
-                            case "Cheese":
-                                break;
-                            case "Baseball":
-                                break;
-                            case "Car":
-                                break;
-                            case "Apple":
-                                break;
-                            case "Stick":
-                                break;
-                            case "Camera":
-                                break;
-                            case "Glasses":
-                                break;
-                            case "Flashlight":
-                                break;
-                            case "MoneyKey":
-                                break;
-                            case "HouseKey":
-                                break;
-                            case "Scissors":
-                                break;
-                            case "Mitton":
-                                break;
-                            case "Pizza":
-                                break;
-                            case "IDcard":
-                                break;
-                            case "Pencil":
-                                break;
-                            case "Battery":
-                                break;
-                            case "Rock":
-                                break;
-                            case "Newspaper":
-                                break;
-                            case "Key":
-                                break;
-                            case "Cookie":
-                                break;
-                            default:
-                                break;
-
-                        }
-                        Debug.Log("HIT ZONE");
+                        HitZone(itemTag);
                     }
                 }
             }
@@ -244,56 +198,66 @@ public class PickUp : MonoBehaviour
                             return;
                         }
                         //Do something with the target zone and/or the object in use
-                        switch (itemTag)
-                        {
-                            case "Cheese":
-                                break;
-                            case "Baseball":
-                                break;
-                            case "Car":
-                                break;
-                            case "Apple":
-                                break;
-                            case "Stick":
-                                break;
-                            case "Camera":
-                                break;
-                            case "Glasses":
-                                break;
-                            case "Flashlight":
-                                break;
-                            case "MoneyKey":
-                                break;
-                            case "HouseKey":
-                                break;
-                            case "Scissors":
-                                break;
-                            case "Mitton":
-                                break;
-                            case "Pizza":
-                                break;
-                            case "IDcard":
-                                break;
-                            case "Pencil":
-                                break;
-                            case "Battery":
-                                break;
-                            case "Rock":
-                                break;
-                            case "Newspaper":
-                                break;
-                            case "Key":
-                                break;
-                            case "Cookie":
-                                break;
-                            default:
-                                break;
-
-                        }
-                        Debug.Log("HIT ZONE");
+                        HitZone(itemTag);
                     }
                 }
             }
         }
+    }
+
+    public void HitZone(string item)
+    {
+        switch (item)
+        {
+            case "Cheese":
+                break;
+            case "Baseball":
+                break;
+            case "Car":
+                break;
+            case "Apple":
+                break;
+            case "Stick":
+                break;
+            case "Camera":
+                break;
+            case "Glasses":
+                break;
+            case "Flashlight":
+                break;
+            case "MoneyKey":
+                break;
+            case "HouseKey":
+                break;
+            case "Scissors":
+                break;
+            case "Mitton":
+                break;
+            case "Pizza":
+                break;
+            case "IDcard":
+                break;
+            case "Pencil":
+                break;
+            case "Battery":
+                break;
+            case "Rock":
+                break;
+            case "Newspaper":
+                break;
+            case "Key":
+                break;
+            case "Cookie":
+                break;
+            case "Soda":
+                Debug.Log("HIT ZONE SODA");
+                break;
+            case "Crowbar":
+                break;
+            default:
+                break;
+
+        }
+        Debug.Log("HIT ZONE");
     }
 }
