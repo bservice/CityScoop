@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0053a51437949444a1e8a7533b364d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkButton: 0
   sceneName: BrandonTests
 --- !u!212 &155354057
 SpriteRenderer:
@@ -699,7 +700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Victoria
+    names: []
     sentences:
     - Just a normal baseball, but it could be useful...
     - I'll take it.
@@ -834,6 +835,7 @@ MonoBehaviour:
   hoverTexture: {fileID: 2800000, guid: 9b32a059d02675449ab733891db61322, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
+  pauseMenu: {fileID: 1643568130}
 --- !u!1 &659317047
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,7 +882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Victoria
+    names: []
     sentences:
     - There are some people around here. They don't seem to be paying me any attention
       though.
@@ -973,7 +975,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Victoria
+    names:
+    - Victoria
+    - Victoria
     sentences:
     - There are some people around here. They don't seem to be paying me any attention
       though.
@@ -1340,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Victoria
+    names: []
     sentences:
     - Now who would just leave a perfectly good rock lying around here?
     - 'How wasteful!
@@ -1949,7 +1953,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Victoria
+    names:
+    - Doodle
+    - Victoria
+    - Doodle
     sentences:
     - It's a statue of 3 bears.
     - 'They look surprisingly clean.
@@ -2099,6 +2106,7 @@ MonoBehaviour:
   cursorTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
+  pauseMenu: {fileID: 1643568130}
   inDialogue: 0
 --- !u!4 &1678822884
 Transform:

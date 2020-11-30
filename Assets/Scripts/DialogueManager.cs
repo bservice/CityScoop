@@ -8,14 +8,12 @@ public class DialogueManager : MonoBehaviour
     // The Text Itself
     public Text nameText;
     public Text dialogueText;
+    public Queue<string> names;
     public Queue<string> sentences;
+    public GameObject[] sprites;
 
     // Animates the Text-box
     public Animator animator;
-    // Animates Vic
-    public Animator animatorVic;
-    private bool mouthOpen = false;
-    public GameObject mouthClosed;
 
     // The Inventory
     private Inventory inv;
@@ -38,6 +36,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         sentences = new Queue<string>();
+        names = new Queue<string>();
         inv = FindObjectOfType<Inventory>();
         look = FindObjectOfType<LookableManager>();
         inDialogue = false;
@@ -67,30 +66,42 @@ public class DialogueManager : MonoBehaviour
             {
                 p.GetComponent<SpriteRenderer>().enabled = false;
             }
-
+            // Disables things that the player can search while in dialogue.
             foreach (Lookable l in look.lookables)
             {
                 l.GetComponent<BoxCollider2D>().enabled = false;
             }
 
             animator.SetBool("IsOpen", true);
-            animatorVic.SetBool("IsIn", true);
 
-            nameText.text = dialogue.name;
+            nameText.text = dialogue.names[0];
 
+            // Empties out the variables.
             sentences.Clear();
+            names.Clear();
 
-            foreach (string sentence in dialogue.sentences)
+            // Gets all of the names and dialogue (always needs to be the same amount!).
+            for(int i = 0; i < dialogue.sentences.Length; i++)
             {
-                sentences.Enqueue(sentence);
+                sentences.Enqueue(dialogue.sentences[i]);
+                names.Enqueue(dialogue.names[i]);
+            }
+
+            // Get all of the sprites for this dialogue.
+            sprites = dialogue.people;
+            foreach (GameObject sprite in sprites)
+            {
+                sprite.GetComponent<SpriteRenderer>().enabled = true;
             }
 
             DisplayNextSentence();
         }
     }
 
+    // Displaces the next sentence in the queue.
     public void DisplayNextSentence()
     {
+        // Won't allow text to continue if paused.
         if (!pauseMenu.Paused)
         {
             if (sentences.Count == 0)
@@ -99,43 +110,57 @@ public class DialogueManager : MonoBehaviour
                 return;
             }
 
+            // Change the text
+            nameText.text = names.Dequeue();
             string sentence = sentences.Dequeue();
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
+
+            // Change the talking sprite.
+            foreach(GameObject sprite in sprites)
+            {
+                if(nameText.text == sprite.name)
+                {
+                    sprite.GetComponent<SpriteRenderer>().color = Color.white;
+                }
+                else
+                {
+                    sprite.GetComponent<SpriteRenderer>().color = Color.grey;
+                }
+            }
         }
     }
 
+    // Slowly types out the sentence.
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
-            mouthClosed.SetActive(!mouthOpen);
-            mouthOpen = !mouthOpen;
             dialogueText.text += letter;
             yield return null;
         }
-        mouthOpen = false;
-        mouthClosed.SetActive(true);
     }
 
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        animatorVic.SetBool("IsIn", false);
 
+        // Enabling the items and searchable areas.
         foreach (PickUp p in inv.inventory)
         {
             p.GetComponent<SpriteRenderer>().enabled = true;
         }
-
         foreach (Lookable l in look.lookables)
         {
             l.GetComponent<BoxCollider2D>().enabled = true;
         }
+        // Disabling the character portraits.
+        foreach (GameObject sprite in sprites)
+        {
+            sprite.GetComponent<SpriteRenderer>().enabled = false;
+        }
 
-        mouthOpen = false;
-        mouthClosed.SetActive(true);
         // Dialogue done.
         inDialogue = false;
     }
