@@ -112,27 +112,46 @@ public class PickUp : MonoBehaviour
     }
 
     //To pull an item from your inventory to use or of the ground
-    public void UseItem(Vector2 target, string tag)
+    public void UseItem(Vector2 target, string itemTag)
     {
-        Debug.Log("HIT");
-        //Validating item
-        if (this.tag != tag)
+        if (!inventory.HaveItem(this.name))
         {
-            return;
+            //Debug.Log("HIT return");
+            //return;
         }
 
         //To store the mouses position
         Vector2 locationOfMouse = Input.mousePosition;
+        //Grab vector2 for cursor to use in AABB math
+        cursorPosition = Input.mousePosition;
+        cursorPosition = Camera.main.ScreenToWorldPoint(cursorPosition);
 
-        //To see if they are clicking if so have that object follow the cursor
-        if (this.CheckForClick())
+        //Selection for objects
+        if (Input.GetMouseButton(1))
         {
-            this.transform.position = locationOfMouse;
-
-            //to see if the item is near the target zone
-            if (Vector2.Distance(this.transform.position, target) <= 2.0f)
+            //AABB collision test for cursor
+            if (cursorPosition.x < this.GetComponent<BoxCollider2D>().bounds.max.x && cursorPosition.x > this.GetComponent<BoxCollider2D>().bounds.min.x)
             {
-                //Do something with the target zone and/or the object in use
+                //Potential collision!
+                //Check the next condition in a nested if statement, just to not have a ton of &'s and to be more efficient
+                if (cursorPosition.y > this.GetComponent<BoxCollider2D>().bounds.min.y && cursorPosition.y < this.GetComponent<BoxCollider2D>().bounds.max.y)
+                {
+                    //Collision!
+                    this.transform.position = cursorPosition;
+
+                    //to see if the item is near the target zone
+                    if (Vector2.Distance(this.transform.position, target) <= 0.2f)
+                    {
+                        //Validating item
+                        if (this.tag != itemTag)
+                        {
+                            Debug.Log("HIT RETURN: " + this.tag + " " + itemTag);
+                            return;
+                        }
+                        //Do something with the target zone and/or the object in use
+                        Debug.Log("HIT ZONE");
+                    }
+                }
             }
         }
     }
