@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     names:
-    - Boss
+    - Victoria
     - Victoria
     - Victoria
     - Victoria
@@ -1678,7 +1678,7 @@ MonoBehaviour:
     - Boss
     - Boss
     sentences:
-    - Sleeping on the job again, Miss Turry?
+    - ...
     - ...
     - ?!
     - Uh... sorry, I...
@@ -2123,7 +2123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007653800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.011616111, y: 0.0075250715, z: 3.46}
+  m_LocalPosition: {x: 0.011616111, y: 0.0075250715, z: -0.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
