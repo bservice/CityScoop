@@ -882,9 +882,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 325777161}
   dialogueText: {fileID: 1700566333}
+  sprites: []
   animator: {fileID: 695414760}
-  animatorVic: {fileID: 2005525938}
-  mouthClosed: {fileID: 1872333015}
   cursorTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
@@ -1032,10 +1031,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Victoria
+    names:
+    - Victoria
+    - Victoria
     sentences:
     - Traded my flashlight for this battery.
     - I'll take it.
+    people: []
 --- !u!1 &964640564
 GameObject:
   m_ObjectHideFlags: 0

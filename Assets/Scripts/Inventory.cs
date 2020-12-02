@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventory : MonoBehaviour
 {
@@ -48,6 +49,12 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Checking to see if the scene is the main menu, if so, clear reset inventory
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            ResetInventory();
+        }
+
         items = FindObjectsOfType<PickUp>();
         CheckForDuplicates();
         if (inventory.Count > 0)
@@ -205,5 +212,19 @@ public class Inventory : MonoBehaviour
         RemoveItem(obj1);
         RemoveItem(obj2);
         AddItem(newObj);
+    }
+
+    //Reset method
+    public void ResetInventory()
+    {
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            inventory[i].Added = false;
+            Destroy(inventory[i]);
+            Destroy(inventory[i].gameObject);
+        }
+
+        removedInventory.Clear();
+        inventory.Clear();
     }
 }

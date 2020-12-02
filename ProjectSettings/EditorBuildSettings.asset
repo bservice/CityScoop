@@ -68,4 +68,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final Scenes/Subway.unity
     guid: 096391addbc007f4bb322426345c709c
+  - enabled: 1
+    path: Assets/Scenes/Final Scenes/HowToPlay.unity
+    guid: 8e27d6d25b1d9d64c934093947769230
+  - enabled: 1
+    path: Assets/Scenes/Final Scenes/Credits.unity
+    guid: d5f6ea7f5acbf6241a9ddf86660e8933
   m_configObjects: {}
