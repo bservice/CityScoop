@@ -12,6 +12,8 @@ public class Button : MonoBehaviour
 
     public string sceneName;
 
+    private PauseTest pauseMenu;
+
     public bool Clicked
     {
         get { return clicked; }
@@ -34,11 +36,17 @@ public class Button : MonoBehaviour
     void Start()
     {
         clicked = false;
+        pauseMenu = FindObjectOfType<PauseTest>();
+        if(pauseMenu == null)
+        {
+            pauseMenu = new PauseTest();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!pauseMenu.Paused)
         CheckForClick();
     }
 
