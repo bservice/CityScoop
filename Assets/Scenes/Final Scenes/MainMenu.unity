@@ -293,7 +293,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6307dafa66c83ce45ae4cfdcaf41ee0d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d9ee10c9d403e564ab58dd4a273f55d3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.108
   m_Pitch: 1
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneButtons: []
-  button: {fileID: 8300000, guid: 8d1378cb044ed434d831945b78f49e1c, type: 3}
+  button: {fileID: 8300000, guid: c92b991032e65de4fb66922901611244, type: 3}
   walk: {fileID: 8300000, guid: 7b57e9549953aa14bb361903517e0754, type: 3}
 --- !u!1001 &1029387713207045861
 PrefabInstance:

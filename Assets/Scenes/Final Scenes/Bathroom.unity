@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneButtons: []
-  button: {fileID: 8300000, guid: 8d1378cb044ed434d831945b78f49e1c, type: 3}
+  button: {fileID: 8300000, guid: c92b991032e65de4fb66922901611244, type: 3}
   walk: {fileID: 8300000, guid: 7b57e9549953aa14bb361903517e0754, type: 3}
 --- !u!82 &74799348
 AudioSource:
@@ -166,7 +166,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8d1378cb044ed434d831945b78f49e1c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c92b991032e65de4fb66922901611244, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.506
   m_Pitch: 1
