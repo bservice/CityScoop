@@ -20,9 +20,10 @@ public class DialogueManager : MonoBehaviour
 
     // All of the lookable objects
     private LookableManager look;
-
     // All of the pickups
-    private PickUp[] pickUps;
+    // All of the buttons.
+    private Button[] buttons;
+
 
     // Cursor Controls
     public Texture2D cursorTexture;
@@ -42,7 +43,7 @@ public class DialogueManager : MonoBehaviour
         names = new Queue<string>();
         inv = FindObjectOfType<Inventory>();
         look = FindObjectOfType<LookableManager>();
-        pickUps = FindObjectsOfType<PickUp>();
+        buttons = FindObjectsOfType<Button>();
         inDialogue = false;
     }
 
@@ -80,6 +81,13 @@ public class DialogueManager : MonoBehaviour
             foreach (NPC n in look.npcs)
             {
                 n.GetComponent<BoxCollider2D>().enabled = false;
+            }
+
+            // Disables all buttons on screen.
+            foreach(Button b in buttons)
+            {
+                b.GetComponent<SpriteRenderer>().enabled = false;
+                b.GetComponent<BoxCollider2D>().enabled = false;
             }
 
             animator.SetBool("IsOpen", true);
@@ -170,6 +178,12 @@ public class DialogueManager : MonoBehaviour
         {
             n.GetComponent<BoxCollider2D>().enabled = true;
         }
+        foreach (Button b in buttons)
+        {
+            b.GetComponent<SpriteRenderer>().enabled = true;
+            b.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
         // Disabling the character portraits.
         foreach (GameObject sprite in sprites)
         {
