@@ -62,14 +62,20 @@ public class DialogueManager : MonoBehaviour
             inDialogue = true;
 
             // Makes inventory items invisible when the text-box pops up.
-            foreach (PickUp p in inv.inventory)
+            if(inv != null)
             {
-                p.GetComponent<SpriteRenderer>().enabled = false;
+                foreach (PickUp p in inv.inventory)
+                {
+                    p.GetComponent<SpriteRenderer>().enabled = false;
+                }
             }
             // Disables things that the player can search while in dialogue.
-            foreach (Lookable l in look.lookables)
-            {
-                l.GetComponent<BoxCollider2D>().enabled = false;
+            if (look != null)
+            { 
+                foreach (Lookable l in look.lookables)
+                {
+                    l.GetComponent<BoxCollider2D>().enabled = false;
+                }
             }
 
             animator.SetBool("IsOpen", true);
