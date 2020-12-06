@@ -21,6 +21,9 @@ public class DialogueManager : MonoBehaviour
     // All of the lookable objects
     private LookableManager look;
 
+    // All of the pickups
+    private PickUp[] pickUps;
+
     // Cursor Controls
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.ForceSoftware;
@@ -39,6 +42,7 @@ public class DialogueManager : MonoBehaviour
         names = new Queue<string>();
         inv = FindObjectOfType<Inventory>();
         look = FindObjectOfType<LookableManager>();
+        pickUps = FindObjectsOfType<PickUp>();
         inDialogue = false;
     }
 
@@ -62,20 +66,20 @@ public class DialogueManager : MonoBehaviour
             inDialogue = true;
 
             // Makes inventory items invisible when the text-box pops up.
-            if(inv != null)
+            foreach (PickUp p in inv.inventory)
             {
-                foreach (PickUp p in inv.inventory)
-                {
-                    p.GetComponent<SpriteRenderer>().enabled = false;
-                }
+                p.GetComponent<SpriteRenderer>().enabled = false;
+                p.GetComponent<BoxCollider2D>().enabled = false;
             }
+
             // Disables things that the player can search while in dialogue.
-            if (look != null)
-            { 
-                foreach (Lookable l in look.lookables)
-                {
-                    l.GetComponent<BoxCollider2D>().enabled = false;
-                }
+            foreach (Lookable l in look.lookables)
+            {
+                l.GetComponent<BoxCollider2D>().enabled = false;
+            }
+            foreach (NPC n in look.npcs)
+            {
+                n.GetComponent<BoxCollider2D>().enabled = false;
             }
 
             animator.SetBool("IsOpen", true);
@@ -156,10 +160,15 @@ public class DialogueManager : MonoBehaviour
         foreach (PickUp p in inv.inventory)
         {
             p.GetComponent<SpriteRenderer>().enabled = true;
+            p.GetComponent<BoxCollider2D>().enabled = true;
         }
         foreach (Lookable l in look.lookables)
         {
             l.GetComponent<BoxCollider2D>().enabled = true;
+        }
+        foreach (NPC n in look.npcs)
+        {
+            n.GetComponent<BoxCollider2D>().enabled = true;
         }
         // Disabling the character portraits.
         foreach (GameObject sprite in sprites)

@@ -6,6 +6,8 @@ public class LookableManager : MonoBehaviour
 {
     // The list of all lookable objects.
     public Lookable[] lookables;
+    // THe list of all NPC objects.
+    public NPC[] npcs;
     // Whether or not the cursor is over a lookable object.
     public bool isHovered = false;
 
@@ -23,6 +25,7 @@ public class LookableManager : MonoBehaviour
     {
         //Following code prevents more than one inventory from being created
         lookables = FindObjectsOfType<Lookable>();
+        npcs = FindObjectsOfType<NPC>();
         /*
         if (lookables.Length > 1)
         {
