@@ -21,6 +21,8 @@ public class EnterScene : MonoBehaviour
 
     // How many lines before the background changes (if empty, nothing happens).
     public int numLinesBeforeBackgroundChange = 0;
+    // The darkness that will cover the screen during this dialogue.
+    public GameObject darkness;
     // How many starting lines of dialogue have happened.
     private int numLines = 0; 
 
@@ -33,8 +35,8 @@ public class EnterScene : MonoBehaviour
             // If the user wants the background to change...
             if (numLinesBeforeBackgroundChange > 0)
             {
-                // Set the background black.
-                this.GetComponent<SpriteRenderer>().color = Color.black;
+                // Enable the darkness.
+                darkness.GetComponent<SpriteRenderer>().enabled = true;
             }
 
             // Start the dialogue.
@@ -49,8 +51,8 @@ public class EnterScene : MonoBehaviour
         // If enough dialogue has passed...
         if(numLines >= numLinesBeforeBackgroundChange)
         {
-            // Revert the background.
-            this.GetComponent<SpriteRenderer>().color = Color.white;
+            // Disable the darkness.
+            darkness.GetComponent<SpriteRenderer>().enabled = false;
         }
     }
 
