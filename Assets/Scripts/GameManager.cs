@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //Array to hold the managers, this will be used to keep it at one
+    private GameManager[] allManagers;
+
     /* Conditional Booleans */
     // Easier to have a list of bools than seperate bools.
     // Each place in the list represents a different condition:
@@ -18,6 +21,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Limit to one game manager in the game
+        allManagers = FindObjectsOfType<GameManager>();
+        if (allManagers.Length > 1)
+        {
+            Destroy(allManagers[1]);
+            Destroy(allManagers[1].gameObject);
+        }
+
         DontDestroyOnLoad(this.gameObject);
         conditionalBools = new bool[5];
         for(int i = 0; i < conditionalBools.Length; i++)
