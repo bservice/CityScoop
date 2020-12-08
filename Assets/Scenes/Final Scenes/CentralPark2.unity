@@ -1318,8 +1318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    names: []
-    sentences: []
+    names:
+    - Cartman
+    sentences:
+    - testtesttest
     people: []
 --- !u!61 &1164145517
 BoxCollider2D:
@@ -1807,7 +1809,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.37, y: 0.23}
+  m_Size: {x: 0.59, y: 0.35}
   m_EdgeRadius: 0
 --- !u!212 &1764379923
 SpriteRenderer:
