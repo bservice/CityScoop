@@ -1755,6 +1755,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: cookie
       objectReference: {fileID: 0}
+    - target: {fileID: 6611015534530625256, guid: 13a71d8759ebe1143950a074f59f6487, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611015534530625256, guid: 13a71d8759ebe1143950a074f59f6487, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611015534530625256, guid: 13a71d8759ebe1143950a074f59f6487, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 6611015534530625256, guid: 13a71d8759ebe1143950a074f59f6487, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A delicious freshly baked cookie.
+      objectReference: {fileID: 0}
     - target: {fileID: 6611015534530625257, guid: 13a71d8759ebe1143950a074f59f6487, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.991

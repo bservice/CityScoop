@@ -1518,6 +1518,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: pizzabox
       objectReference: {fileID: 0}
+    - target: {fileID: 4149857166291921100, guid: ac6212e26017d6f47aa64a9585505ebf, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149857166291921100, guid: ac6212e26017d6f47aa64a9585505ebf, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149857166291921100, guid: ac6212e26017d6f47aa64a9585505ebf, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149857166291921100, guid: ac6212e26017d6f47aa64a9585505ebf, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: "A pizza box! Oh, its empty\u2026"
+      objectReference: {fileID: 0}
     - target: {fileID: 6180943890630701863, guid: ac6212e26017d6f47aa64a9585505ebf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.097

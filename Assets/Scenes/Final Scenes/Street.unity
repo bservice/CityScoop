@@ -2082,6 +2082,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7525357737352775761, guid: fa408d5347c820f499fbbed178ae55a2, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525357737352775761, guid: fa408d5347c820f499fbbed178ae55a2, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525357737352775761, guid: fa408d5347c820f499fbbed178ae55a2, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525357737352775761, guid: fa408d5347c820f499fbbed178ae55a2, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: "A soda I found lying on the street, unfortunately it\u2019s empty."
+      objectReference: {fileID: 0}
     - target: {fileID: 7525357737352775766, guid: fa408d5347c820f499fbbed178ae55a2, type: 3}
       propertyPath: m_Name
       value: soda

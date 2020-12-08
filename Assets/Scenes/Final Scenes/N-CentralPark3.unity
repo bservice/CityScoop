@@ -1406,6 +1406,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8230658225282966327, guid: 3a93aeaca36b355488dbcca3ad31467f, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8230658225282966327, guid: 3a93aeaca36b355488dbcca3ad31467f, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8230658225282966327, guid: 3a93aeaca36b355488dbcca3ad31467f, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 8230658225282966327, guid: 3a93aeaca36b355488dbcca3ad31467f, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A flashlight, I can use this to see when it becomes too dark.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a93aeaca36b355488dbcca3ad31467f, type: 3}
 --- !u!1 &1633718018 stripped
