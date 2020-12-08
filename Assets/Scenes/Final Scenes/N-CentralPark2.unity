@@ -1582,7 +1582,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    names: []
+    names:
+    - Victoria
+    - Victoria
     sentences:
     - An unused pizza box.
     - I'll take it.

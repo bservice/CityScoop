@@ -202,7 +202,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    names: []
+    names:
+    - Victoria
+    - Victoria
     sentences:
     - I used my water to get this battery.
     - I'll take it.
