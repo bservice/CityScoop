@@ -22,6 +22,48 @@ TagManager:
   - Crowbar
   - Pencil
   - Key
+  - t_Door
+  - t_Tree
+  - t_Box
+  - t_Car
+  - t_Safe
+  - t_HeavyObj
+  - t_Grate
+  - t_Coworker
+  - t_Notes
+  - t_Sign
+  - t_Bike
+  - t_Can
+  - t_Panel
+  - t_Animal
+  - t_Dark
+  - t_Gate
+  - t_RC
+  - t_Radio
+  - t_Person
+  - t_water
+  - t_HoldDown
+  - t_Pixi
+  - t_Touch
+  - t_Incident
+  - t_Destination
+  - t_Certification
+  - t_Kid
+  - t_Bird
+  - t_Dog
+  - t_Boss
+  - t_Prove
+  - t_Button
+  - t_Push
+  - t_Child
+  - t_Energy
+  - t_Telescope
+  - t_Ducks
+  - t_Arcade
+  - t_LightSource
+  - t_Read
+  - t_Lost
+  - t_Collects
   layers:
   - Default
   - TransparentFX
