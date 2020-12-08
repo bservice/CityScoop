@@ -9,11 +9,12 @@ public class GameManager : MonoBehaviour
     private GameManager[] allManagers;
 
     //End Condition
-    bool hasTomatoe = false;
-    bool hasPizzaBox = false;
-    bool hasCheese = false;
-    bool hasWater = false;
-    bool pizzaMade = false;
+    public bool hasTomatoe = false;
+    public bool hasPizzaBox = false;
+    public bool hasCheese = false;
+    public bool hasWater = false;
+    public bool pizzaMade = false;
+    public bool bossTalkPizza = false;
     int counter = 0;
 
     DialogueManager dialogueManager;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     //  2 - Whether or not the player has spoken to the ex-delivertman.
     //  3 - Whether or not you've talked to doodle.
     //  4 - Whether or not the Bicorn has been helped.
+    //  5 - Whether or not you've talked to boss in the pizzeria
     public bool[] conditionalBools;
 
     // Start is called before the first frame update
@@ -40,7 +42,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        conditionalBools = new bool[5];
+        conditionalBools = new bool[6];
         for(int i = 0; i < conditionalBools.Length; i++)
         {
             conditionalBools[i] = false;
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         */
-
+    
         //If you have all the pieces
         if (hasCheese && hasPizzaBox && hasTomatoe && hasWater)
         {

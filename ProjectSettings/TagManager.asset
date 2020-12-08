@@ -37,30 +37,19 @@ TagManager:
   - t_Panel
   - t_Animal
   - t_Dark
-  - t_Gate
   - t_RC
-  - t_Radio
   - t_Person
-  - t_HoldDown
   - t_Pixi
-  - t_Touch
   - t_Kid
   - t_Bird
-  - t_Dog
   - t_Boss
-  - t_Prove
   - t_Button
-  - t_Push
-  - t_Child
-  - t_Energy
-  - t_LightSource
-  - t_Read
-  - t_Lost
-  - t_Collects
   - GardenKey
   - BathroomKey
   - t_Bathroom
   - t_Garden
+  - PizzaBox
+  - Tomato
   layers:
   - Default
   - TransparentFX

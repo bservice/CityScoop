@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     public string name;
     private Inventory inventory;
     public InteractingObjects interObjRef;
+    public GameManager gManager;
 
     public bool frozen = false;
 
@@ -48,7 +49,10 @@ public class PickUp : MonoBehaviour
         pauseMenu = FindObjectOfType<PauseTest>();
         added = false;
         soundEffect = GetComponent<AudioSource>();
-        if(this.tag == "Ball") { frozen = true; }
+
+        if (this.tag == "Ball") { frozen = true; }
+
+        gManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -73,6 +77,24 @@ public class PickUp : MonoBehaviour
                 UseItem("Ball", "Target"); 
             }
         }
+
+        if (inventory.HaveItem("Cheese"))
+        {
+            gManager.hasCheese = true;
+        }
+        if (inventory.HaveItem("Pizzabox"))
+        {
+            gManager.hasPizzaBox = true;
+        }
+        if (inventory.HaveItem("Tomato"))
+        {
+            gManager.hasTomatoe = true;
+        }
+        if (inventory.HaveItem("Pizzabox"))
+        {
+            gManager.hasPizzaBox = true;
+        }
+        Debug.Log(gManager.hasTomatoe);
     }
 
     //Method to check for click
@@ -295,9 +317,7 @@ public class PickUp : MonoBehaviour
                 break;
             case "Ball":
                 break;
-            case "GardenKey":
-                break;
-            case "BathroomKey":
+            case "PizzaBox":
                 break;
             default:
                 break;

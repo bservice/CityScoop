@@ -697,6 +697,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: rc
       objectReference: {fileID: 0}
+    - target: {fileID: 5505589887303092223, guid: 38a91a869bbe4d342927e7a13f9363d7, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505589887303092223, guid: 38a91a869bbe4d342927e7a13f9363d7, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505589887303092223, guid: 38a91a869bbe4d342927e7a13f9363d7, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505589887303092223, guid: 38a91a869bbe4d342927e7a13f9363d7, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A green RC truck, I always found these pleasantly distracting.
+      objectReference: {fileID: 0}
     - target: {fileID: 7767138522859400531, guid: 38a91a869bbe4d342927e7a13f9363d7, type: 3}
       propertyPath: m_SortingOrder
       value: 0
