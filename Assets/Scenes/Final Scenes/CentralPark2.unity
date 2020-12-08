@@ -2003,7 +2003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00864f8f998b6c4fa0e1085091542ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditionsThatChangeDialogue: 06000000
+  conditionsThatChangeDialogue: 0600000007000000
   dialogues:
   - names:
     - Cartman
@@ -2036,6 +2036,29 @@ MonoBehaviour:
     - "If you somehow find anything out, let me know. It\u2019ll make me feel a little
       better knowing I was right.\r"
     - "Will do. That\u2019s all the questions I have, thanks for your time. "
+    people:
+    - {fileID: 1972534062}
+    - {fileID: 893939835}
+    conditionToChange: 7
+  - names:
+    - Victoria
+    - Cartman
+    - Cartman
+    - Cartman
+    - Cartman
+    - Victoria
+    sentences:
+    - "Can you tell me about what happened at your old job again?\r"
+    - "I told them it wasn\u2019t my fault. I\u2019d put it in the bag, and it\u2019d
+      just be gone. Guess they thought I was stealing it, but I saw it happen to
+      other people delivering pizza too."
+    - "Riding in the bike lane, then they\u2019d suddenly open their bags and it\u2019d
+      be empty.\r"
+    - This one time, I thought I saw a blue light. But it was probably just my imagination.
+      Are you really going to investigate this?
+    - " If you somehow find anything out, let me know. It\u2019ll make me feel a
+      little better knowing I was right."
+    - Thanks for your time.
     people:
     - {fileID: 1972534062}
     - {fileID: 893939835}
