@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
         inv = FindObjectOfType<Inventory>();
         look = FindObjectOfType<LookableManager>();
         buttons = FindObjectsOfType<Button>();
+        pauseMenu = FindObjectOfType<PauseTest>();
         inDialogue = false;
     }
 

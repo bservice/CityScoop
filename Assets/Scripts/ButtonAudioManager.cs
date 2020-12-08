@@ -16,6 +16,7 @@ public class ButtonAudioManager : MonoBehaviour
     private AudioSource soundEffect;
     public AudioClip button;
     public AudioClip walk;
+    public AudioClip portal;
 
     // Start is called before the first frame update
     void Start()
@@ -58,6 +59,10 @@ public class ButtonAudioManager : MonoBehaviour
                 if(sceneButtons[i].Walk)
                 {
                     soundEffect.PlayOneShot(walk);
+                }
+                else if(sceneButtons[i].Portal)
+                {
+                    soundEffect.PlayOneShot(portal);
                 }
                 else
                 {

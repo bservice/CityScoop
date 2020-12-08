@@ -7,6 +7,7 @@ public class Button : MonoBehaviour
 {
     private bool clicked;
     public bool walkButton;
+    public bool portalButton;
 
     Vector2 cursorPosition;
 
@@ -26,6 +27,10 @@ public class Button : MonoBehaviour
     public bool Walk
     {
         get { return walkButton; }
+    }
+    public bool Portal
+    {
+        get { return portalButton; }
     }
 
     public string Scene

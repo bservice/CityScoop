@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1713687752090701734, guid: 23fd483e17789744d9b76d2bdde7cf7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.018
+      value: -1.037
       objectReference: {fileID: 0}
     - target: {fileID: 1713687752090701734, guid: 23fd483e17789744d9b76d2bdde7cf7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -608,7 +608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.032, y: 1.5720001}
+  m_AnchoredPosition: {x: -0.032, y: 1.643}
   m_SizeDelta: {x: 960.6181, y: 445.85452}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1439501698
@@ -727,11 +727,14 @@ MonoBehaviour:
 
     Slaking_97 - Background music
 
+    Sergenious
+    - portal
 
-    And
-    Free Pixel Font - Thaleah by tiny worlds
 
-    on the unity asset store'
+    And Free Pixel Font - Thaleah by tiny worlds
+
+    on the unity
+    asset store'
 --- !u!222 &1439501702
 CanvasRenderer:
   m_ObjectHideFlags: 0
