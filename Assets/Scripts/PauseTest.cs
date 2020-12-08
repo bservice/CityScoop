@@ -8,6 +8,7 @@ public class PauseTest : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject playButton;
     public GameObject exitButton;
+    public GameObject pauseButton;
 
     private bool paused;
 
@@ -51,13 +52,14 @@ public class PauseTest : MonoBehaviour
         else
         {
             //playButton.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (pauseButton.GetComponent<PausePlay>().Clicked)
             {
                 //playButton.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
                 paused = true;
                 pauseMenu.transform.position = new Vector3(0.024f, -0.097f, 1);
                 playButton.transform.position = new Vector3(-0.269f, -0.276f, 1);
                 exitButton.transform.position = new Vector3(0.342f, -0.276f, 1);
+                pauseButton.GetComponent<PausePlay>().Clicked = false;
                 //playButton.GetComponent<BoxCollider2D>().transform.position = new Vector3(-0.269f, -0.276f, 1);
                 //exitButton.GetComponent<BoxCollider2D>().transform.position = new Vector3(0.342f, -0.276f, 1);
             }

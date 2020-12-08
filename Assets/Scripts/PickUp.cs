@@ -242,7 +242,7 @@ public class PickUp : MonoBehaviour
                 break;
             case "Scissors":
                 break;
-            case "Mitton":
+            case "Mitten":
                 break;
             case "Pizza":
                 break;
@@ -264,6 +264,14 @@ public class PickUp : MonoBehaviour
                 Debug.Log("HIT ZONE SODA");
                 break;
             case "Crowbar":
+                break;
+            case "Papers":
+                break;
+            case "Screwdriver":
+                    break;
+            case "Quarters":
+                break;
+            case "Ball":
                 break;
             default:
                 break;

@@ -7,6 +7,21 @@ TagManager:
   - Target
   - Soda
   - Cheese
+  - Glasses
+  - Quarters
+  - Cookie
+  - Stick
+  - Camera
+  - Ball
+  - Papers
+  - Mitten
+  - Rock
+  - Battery
+  - Flashlight
+  - Screwdriver
+  - Crowbar
+  - Pencil
+  - Key
   layers:
   - Default
   - TransparentFX
