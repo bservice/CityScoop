@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 35659f9da0b63934583d980ed3793863, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,6 +125,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: RC
   interObjRef: {fileID: 0}
+  gManager: {fileID: 0}
+  frozen: 0
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  invDialogue:
+    names: []
+    sentences: []
+    people: []
+    conditionToChange: -1
 --- !u!82 &5179252038513658767
 AudioSource:
   m_ObjectHideFlags: 0
