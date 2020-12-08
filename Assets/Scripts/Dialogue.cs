@@ -11,4 +11,6 @@ public class Dialogue
     public string[] sentences;
 
     public GameObject[] people;
+
+    public int conditionToChange = -1;
 }

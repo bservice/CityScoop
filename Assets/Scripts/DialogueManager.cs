@@ -113,6 +113,13 @@ public class DialogueManager : MonoBehaviour
                 sprite.GetComponent<SpriteRenderer>().enabled = true;
             }
 
+            // If the dialogue should change a conditional...
+            if(dialogue.conditionToChange != -1)
+            {
+                // Change it!
+                FindObjectOfType<GameManager>().conditionalBools[dialogue.conditionToChange] = true;
+            }
+
             DisplayNextSentence();
         }
     }
