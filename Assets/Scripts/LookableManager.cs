@@ -8,8 +8,6 @@ public class LookableManager : MonoBehaviour
     public Lookable[] lookables;
     // THe list of all NPC objects.
     public NPC[] npcs;
-    // Whether or not the cursor is over a lookable object.
-    public bool isHovered = false;
 
     // Cursor Controls
     public Texture2D normalTexture;
@@ -40,24 +38,5 @@ public class LookableManager : MonoBehaviour
             npcs[i].specialTexture = speakTexture;
             npcs[i].normalTexture = normalTexture;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        if (!pauseMenu.Paused)
-        {
-            foreach (Lookable l in lookables)
-            {
-                if (l.isHovered = true)
-                {
-                    Cursor.SetCursor(hoverTexture, hotSpot, cursorMode);
-                    return;
-                }
-            }
-            Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
-        }
-        */
     }
 }

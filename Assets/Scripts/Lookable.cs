@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Lookable : MonoBehaviour
 {
-    // Whether or not the cursor is over this lookable object.
-    public bool isHovered = false;
-
     // Cursor Controls
     public Texture2D specialTexture;
     public Texture2D normalTexture;
@@ -16,13 +13,11 @@ public class Lookable : MonoBehaviour
     void OnMouseEnter()
     {
         Cursor.SetCursor(specialTexture, hotSpot, cursorMode);
-        isHovered = true;
     }
 
     void OnMouseExit()
     {
         Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
-        isHovered = false;
     }
 
     public void OnMouseDown()

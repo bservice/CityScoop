@@ -16,6 +16,12 @@ public class PickUp : MonoBehaviour
 
     private AudioSource soundEffect;
 
+    // Cursor Controls
+    public Texture2D specialTexture;
+    public Texture2D normalTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     public string Name
     {
         get { return name; }
