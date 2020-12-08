@@ -1265,7 +1265,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!1 &1384418720
 GameObject:
@@ -1457,6 +1457,7 @@ MonoBehaviour:
     - ...
     - What a surprise. Tourists pay loads of money to support animal abuse.
     people: []
+    conditionToChange: -1
 --- !u!114 &1492264572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,6 +1501,7 @@ MonoBehaviour:
     - {fileID: 416731522}
     - {fileID: 2074661236}
     - {fileID: 1855624654}
+    conditionToChange: -1
   specialTexture: {fileID: 0}
   normalTexture: {fileID: 0}
   cursorMode: 0
@@ -2004,7 +2006,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 976f4a4b92e4a0d45a529f75c912c87d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2130,6 +2132,7 @@ MonoBehaviour:
       liquid. Littering is the worst. "
     - I'll take it.
     people: []
+    conditionToChange: -1
 --- !u!1 &2000918033
 GameObject:
   m_ObjectHideFlags: 0

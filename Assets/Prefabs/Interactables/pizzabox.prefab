@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 65e916ea280c85246b8185b67bbb75b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -125,6 +125,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Pizzabox
   interObjRef: {fileID: 0}
+  gManager: {fileID: 0}
+  frozen: 0
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  invDialogue:
+    names: []
+    sentences: []
+    people: []
+    conditionToChange: -1
 --- !u!82 &-5317321270908501152
 AudioSource:
   m_ObjectHideFlags: 0

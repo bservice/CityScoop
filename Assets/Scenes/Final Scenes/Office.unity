@@ -391,6 +391,7 @@ MonoBehaviour:
     people:
     - {fileID: 1151153038}
     - {fileID: 2007653800}
+    conditionToChange: -1
   conditional: 0
   numLinesBeforeBackgroundChange: 3
   darkness: {fileID: 1365158378}
@@ -866,6 +867,7 @@ MonoBehaviour:
       a good weapon, though you can't think of why you'd really need one.
     - I'll take it.
     people: []
+    conditionToChange: -1
 --- !u!1 &546407348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1143,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 976f4a4b92e4a0d45a529f75c912c87d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1371,7 +1373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bd13c913040c3704286bda526418ebfa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1482,7 +1484,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &1264975730
 GameObject:
@@ -1749,6 +1751,7 @@ MonoBehaviour:
       time anyone cared.
     - I'll take it.
     people: []
+    conditionToChange: -1
 --- !u!1 &1339449413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +1857,7 @@ MonoBehaviour:
     people:
     - {fileID: 1151153038}
     - {fileID: 2007653800}
+    conditionToChange: -1
 --- !u!114 &1339449417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,7 +1958,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 88aabf52552d6744fa3c4354a7c98035, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2305,7 +2309,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 38e63b67def5b034baeef8a8720855db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

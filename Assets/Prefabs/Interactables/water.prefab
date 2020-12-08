@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 42f50319ba26b1549a6e8fb77548aca2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,6 +99,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Water Sludge
   interObjRef: {fileID: 0}
+  gManager: {fileID: 0}
+  frozen: 0
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  invDialogue:
+    names: []
+    sentences: []
+    people: []
+    conditionToChange: -1
 --- !u!61 &2322100157049867925
 BoxCollider2D:
   m_ObjectHideFlags: 0

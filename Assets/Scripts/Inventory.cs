@@ -50,7 +50,7 @@ public class Inventory : MonoBehaviour
     void Update()
     {
         //Checking to see if the scene is the main menu, if so, clear reset inventory
-        if(SceneManager.GetActiveScene().name == "MainMenu")
+        if(SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "Credits")
         {
             ResetInventory();
         }

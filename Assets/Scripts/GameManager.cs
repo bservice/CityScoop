@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public bool hasWater = false;
     public bool pizzaMade = false;
     public bool bossTalkPizza = false;
+    public bool talkedToEmployee = false;
     int counter = 0;
 
     DialogueManager dialogueManager;
@@ -28,6 +29,8 @@ public class GameManager : MonoBehaviour
     //  3 - Whether or not you've talked to doodle.
     //  4 - Whether or not the Bicorn has been helped.
     //  5 - Whether or not you've talked to boss in the pizzeria
+    //  6 - Whether or not you've talked to employee in the pizzeria
+    //  7 - Whether or not you've talked to cartman and got his story
     public bool[] conditionalBools;
 
     // Start is called before the first frame update
@@ -42,7 +45,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        conditionalBools = new bool[6];
+        conditionalBools = new bool[8];
         for(int i = 0; i < conditionalBools.Length; i++)
         {
             conditionalBools[i] = false;
@@ -86,7 +89,7 @@ public class GameManager : MonoBehaviour
 
 
             //Play Credits
-            if(dialogueManager.inDialogue == false && counter > 600)
+            if(/*dialogueManager.inDialogue == false &&*/ counter > 600)
             {
                 SceneManager.LoadScene("Credits");
             }
