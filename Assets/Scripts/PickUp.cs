@@ -58,8 +58,9 @@ public class PickUp : MonoBehaviour
         {
             CheckForClick();
             if (this.tag == "Soda") { UseItem("Soda", "Target"); }
-            //UseItem("Soda","Target");
-            if (this.tag == "Stick") { UseItem("Stick", "t_Tree"); }
+
+            if (this.tag == "Stick") { UseItem(this.tag, "t_Tree"); }
+
             if (this.tag == "Ball")
             {
                 if(!this.frozen && this.transform.position.y > -0.25)
@@ -293,6 +294,10 @@ public class PickUp : MonoBehaviour
             case "Quarters":
                 break;
             case "Ball":
+                break;
+            case "GardenKey":
+                break;
+            case "BathroomKey":
                 break;
             default:
                 break;
