@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     bool pizzaMade = false;
     int counter = 0;
 
-    DialogueManager dialogueManager = FindObjectOfType<DialogueManager>();
+    DialogueManager dialogueManager;
 
     /* Conditional Booleans */
     // Easier to have a list of bools than seperate bools.
@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
         {
             conditionalBools[i] = false;
         }
+
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     // Update is called once per frame
