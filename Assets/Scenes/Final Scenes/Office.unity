@@ -822,6 +822,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6276390885023305479, guid: d5050e5df66dd3249abc844fc1864911, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276390885023305479, guid: d5050e5df66dd3249abc844fc1864911, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276390885023305479, guid: d5050e5df66dd3249abc844fc1864911, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 6276390885023305479, guid: d5050e5df66dd3249abc844fc1864911, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A pair of sturdy office scissors.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5050e5df66dd3249abc844fc1864911, type: 3}
 --- !u!1 &528692814 stripped
@@ -1684,6 +1700,22 @@ PrefabInstance:
     - target: {fileID: 3962548244117266733, guid: bb2db97fabba24241900f391d16e585d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959375799181626036, guid: bb2db97fabba24241900f391d16e585d, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959375799181626036, guid: bb2db97fabba24241900f391d16e585d, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959375799181626036, guid: bb2db97fabba24241900f391d16e585d, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959375799181626036, guid: bb2db97fabba24241900f391d16e585d, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: My ID badge, it proves I am a reporter.
       objectReference: {fileID: 0}
     - target: {fileID: 8778442773141098259, guid: bb2db97fabba24241900f391d16e585d, type: 3}
       propertyPath: m_Name
