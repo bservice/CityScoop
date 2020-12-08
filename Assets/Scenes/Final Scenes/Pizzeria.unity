@@ -1540,34 +1540,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00864f8f998b6c4fa0e1085091542ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditionsThatChangeDialogue: 06000000
+  conditionsThatChangeDialogue: 0500000006000000
   dialogues:
   - names:
-    - Employee
-    sentences:
-    - That's all I have for you.
-    people:
-    - {fileID: 484365452}
-    - {fileID: 1488244748}
-    conditionToChange: 0
-  specialTexture: {fileID: 0}
-  normalTexture: {fileID: 0}
-  cursorMode: 0
-  hotSpot: {x: 0, y: 0}
---- !u!114 &1087076317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1087076315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ae123a33e21002429800c1453ad56ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    names:
     - Victoria
     - Victoria
     - Employee
@@ -1600,6 +1575,38 @@ MonoBehaviour:
     - {fileID: 484365452}
     - {fileID: 1488244748}
     conditionToChange: 6
+  - names:
+    - Employee
+    sentences:
+    - That's all I have for you.
+    people:
+    - {fileID: 484365452}
+    - {fileID: 1488244748}
+    conditionToChange: 0
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+--- !u!114 &1087076317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087076315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ae123a33e21002429800c1453ad56ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    names:
+    - Employee
+    sentences:
+    - Welcome to Central Pizza!
+    people:
+    - {fileID: 1488244748}
+    conditionToChange: -1
 --- !u!61 &1087076318
 BoxCollider2D:
   m_ObjectHideFlags: 0
