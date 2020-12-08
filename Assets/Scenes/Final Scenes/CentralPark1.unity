@@ -864,7 +864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8805043915693356023, guid: 49ab4a890474d3b4386c3b37beea81c6, type: 3}
       propertyPath: sceneName
-      value: OfficeFront
+      value: Street
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49ab4a890474d3b4386c3b37beea81c6, type: 3}
