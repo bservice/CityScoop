@@ -9,11 +9,11 @@ public class GameManager : MonoBehaviour
     private GameManager[] allManagers;
 
     //End Condition
-    bool hasTomatoe = false;
-    bool hasPizzaBox = false;
-    bool hasCheese = false;
-    bool hasWater = false;
-    bool pizzaMade = false;
+    public bool hasTomatoe = false;
+    public bool hasPizzaBox = false;
+    public bool hasCheese = false;
+    public bool hasWater = false;
+    public bool pizzaMade = false;
     int counter = 0;
 
     DialogueManager dialogueManager;
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         */
-
+    
         //If you have all the pieces
         if (hasCheese && hasPizzaBox && hasTomatoe && hasWater)
         {
