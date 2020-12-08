@@ -2380,6 +2380,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stick
       objectReference: {fileID: 0}
+    - target: {fileID: 774879774462319495, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
+      propertyPath: m_TagString
+      value: Stick
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
 --- !u!1 &1968365995 stripped
