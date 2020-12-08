@@ -44,7 +44,26 @@ TagManager:
   - t_water
   - t_HoldDown
   - t_Pixi
-  - t_touch
+  - t_Touch
+  - t_Incident
+  - t_Destination
+  - t_Certification
+  - t_Kid
+  - t_Bird
+  - t_Dog
+  - t_Boss
+  - t_Prove
+  - t_Button
+  - t_Push
+  - t_Child
+  - t_Energy
+  - t_Telescope
+  - t_Ducks
+  - t_Arcade
+  - t_LightSource
+  - t_Read
+  - t_Lost
+  - t_Collects
   layers:
   - Default
   - TransparentFX
