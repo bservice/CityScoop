@@ -12,6 +12,12 @@ public class NPC : MonoBehaviour
     // The dialogue to change to.
     public Dialogue[] dialogues;
 
+    // Mouse stuff
+    public Texture2D specialTexture;
+    public Texture2D normalTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,9 +33,14 @@ public class NPC : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseEnter()
     {
+        Cursor.SetCursor(specialTexture, hotSpot, cursorMode);
+    }
+
+    void OnMouseExit()
+    {
+        Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
     }
 
     public void OnMouseDown()

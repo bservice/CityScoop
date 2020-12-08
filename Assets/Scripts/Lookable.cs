@@ -8,24 +8,32 @@ public class Lookable : MonoBehaviour
     public bool isHovered = false;
 
     // Cursor Controls
-    public Texture2D cursorTexture;
-    public CursorMode cursorMode = CursorMode.ForceSoftware;
+    public Texture2D specialTexture;
+    public Texture2D normalTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
     void OnMouseEnter()
     {
-        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+        Cursor.SetCursor(specialTexture, hotSpot, cursorMode);
         isHovered = true;
     }
 
     void OnMouseExit()
     {
-        //Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
         isHovered = false;
     }
 
     public void OnMouseDown()
     {
         GetComponent<DialogueTrigger>().TriggerDialogue();
+    }
+
+    
+    private void Update()
+    {
+        //BoxCollider2D collider = this.GetComponent<BoxCollider2D>();
+        //if(collider.IsTouching())
     }
 }
