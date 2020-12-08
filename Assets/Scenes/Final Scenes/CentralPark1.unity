@@ -2026,6 +2026,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: water(actually)
       objectReference: {fileID: 0}
+    - target: {fileID: 3206805141014351669, guid: 93236b6b24522e94d8be6ad8780346e6,
+        type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206805141014351669, guid: 93236b6b24522e94d8be6ad8780346e6,
+        type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206805141014351669, guid: 93236b6b24522e94d8be6ad8780346e6,
+        type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: I filled up this cup with some puddle water.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206805141014351669, guid: 93236b6b24522e94d8be6ad8780346e6,
+        type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93236b6b24522e94d8be6ad8780346e6, type: 3}
 --- !u!1 &1528118690 stripped
@@ -2435,12 +2455,12 @@ PrefabInstance:
     - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27,
         type: 3}
       propertyPath: invDialogue.names.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27,
         type: 3}
       propertyPath: invDialogue.sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27,
         type: 3}
@@ -2455,12 +2475,13 @@ PrefabInstance:
     - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27,
         type: 3}
       propertyPath: invDialogue.sentences.Array.data[0]
-      value: A stick I found in central park.
+      value: A long stick I found in the park. I could probably reach something with
+        this.
       objectReference: {fileID: 0}
     - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27,
         type: 3}
       propertyPath: invDialogue.sentences.Array.data[1]
-      value: Maybe I can use it to get something out of my reach...
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 774879774462319489, guid: ad56dad61c12b5b43868b3fad2ec2c27,
         type: 3}

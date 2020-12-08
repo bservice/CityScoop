@@ -303,6 +303,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.963
       objectReference: {fileID: 0}
+    - target: {fileID: 7682659106499963904, guid: d9bf6276b4d776b4ab5082a0645459ab,
+        type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682659106499963904, guid: d9bf6276b4d776b4ab5082a0645459ab,
+        type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682659106499963904, guid: d9bf6276b4d776b4ab5082a0645459ab,
+        type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682659106499963904, guid: d9bf6276b4d776b4ab5082a0645459ab,
+        type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A well-used baseball, perfect for a game of catch.
+      objectReference: {fileID: 0}
     - target: {fileID: 7682659106499963905, guid: d9bf6276b4d776b4ab5082a0645459ab,
         type: 3}
       propertyPath: m_LocalPosition.z

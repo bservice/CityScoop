@@ -401,6 +401,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3862849240652433680, guid: ce2535a4d942fd34597fb1fd07ac1fc7, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862849240652433680, guid: ce2535a4d942fd34597fb1fd07ac1fc7, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862849240652433680, guid: ce2535a4d942fd34597fb1fd07ac1fc7, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862849240652433680, guid: ce2535a4d942fd34597fb1fd07ac1fc7, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A strange piece of cheese with horns attached to it.
+      objectReference: {fileID: 0}
     - target: {fileID: 4443375004252377553, guid: ce2535a4d942fd34597fb1fd07ac1fc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.032
@@ -1913,6 +1929,22 @@ PrefabInstance:
     - target: {fileID: 1630690828205426726, guid: bda4b47c4bf1e33489b4e3132450f4b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630690828205426728, guid: bda4b47c4bf1e33489b4e3132450f4b5, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630690828205426728, guid: bda4b47c4bf1e33489b4e3132450f4b5, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630690828205426728, guid: bda4b47c4bf1e33489b4e3132450f4b5, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: It appears to be a key to a bathroom.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630690828205426728, guid: bda4b47c4bf1e33489b4e3132450f4b5, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
       objectReference: {fileID: 0}
     - target: {fileID: 1630690828205426730, guid: bda4b47c4bf1e33489b4e3132450f4b5, type: 3}
       propertyPath: m_Name

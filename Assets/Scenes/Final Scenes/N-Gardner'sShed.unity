@@ -527,6 +527,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5341096559826242965, guid: bd9080f746a312245b9cb4f064e03b08, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341096559826242965, guid: bd9080f746a312245b9cb4f064e03b08, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341096559826242965, guid: bd9080f746a312245b9cb4f064e03b08, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 5341096559826242965, guid: bd9080f746a312245b9cb4f064e03b08, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A tomato that appears to have glinting purple wings.
+      objectReference: {fileID: 0}
     - target: {fileID: 5717581104360643767, guid: bd9080f746a312245b9cb4f064e03b08, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.053
