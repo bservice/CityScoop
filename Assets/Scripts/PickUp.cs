@@ -82,7 +82,19 @@ public class PickUp : MonoBehaviour
         {
             gManager.hasCheese = true;
         }
-        Debug.Log(gManager.hasCheese);
+        if (inventory.HaveItem("Pizzabox"))
+        {
+            gManager.hasPizzaBox = true;
+        }
+        if (inventory.HaveItem("Tomato"))
+        {
+            gManager.hasTomatoe = true;
+        }
+        if (inventory.HaveItem("Pizzabox"))
+        {
+            gManager.hasPizzaBox = true;
+        }
+        Debug.Log(gManager.hasTomatoe);
     }
 
     //Method to check for click
@@ -305,9 +317,7 @@ public class PickUp : MonoBehaviour
                 break;
             case "Ball":
                 break;
-            case "GardenKey":
-                break;
-            case "BathroomKey":
+            case "PizzaBox":
                 break;
             default:
                 break;
