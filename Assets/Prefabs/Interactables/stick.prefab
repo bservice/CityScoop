@@ -99,6 +99,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Stick
   interObjRef: {fileID: 0}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  invDialogue:
+    names: []
+    sentences: []
+    people: []
 --- !u!61 &-4420456993469470621
 BoxCollider2D:
   m_ObjectHideFlags: 0

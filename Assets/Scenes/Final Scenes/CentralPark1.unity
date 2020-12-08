@@ -608,7 +608,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1318263718}
   sprites: []
   animator: {fileID: 476731957}
-  cursorTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
+  specialTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
+  normalTexture: {fileID: 2800000, guid: 6e7adbf581b042e4194fbe1afbbbd19f, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
   pauseMenu: {fileID: 1134930999}
@@ -677,8 +678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf32954d14b1b34199bf3dde46b1f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHovered: 0
-  cursorTexture: {fileID: 0}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
 --- !u!61 &668583213
@@ -959,8 +960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf32954d14b1b34199bf3dde46b1f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHovered: 0
-  cursorTexture: {fileID: 2800000, guid: 9b32a059d02675449ab733891db61322, type: 3}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
 --- !u!61 &933814007
@@ -1325,9 +1326,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookables: []
   npcs: []
-  isHovered: 0
+  pickUps: []
   normalTexture: {fileID: 2800000, guid: 6e7adbf581b042e4194fbe1afbbbd19f, type: 3}
-  hoverTexture: {fileID: 2800000, guid: 9b32a059d02675449ab733891db61322, type: 3}
+  searchTexture: {fileID: 2800000, guid: 9f59e670abb736d4a9aab3a9f0ac8931, type: 3}
+  speakTexture: {fileID: 2800000, guid: fcb4d876446f22f479af2cb372120c99, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
   pauseMenu: {fileID: 1134930999}
@@ -1505,8 +1507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf32954d14b1b34199bf3dde46b1f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHovered: 0
-  cursorTexture: {fileID: 0}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
   cursorMode: 1
   hotSpot: {x: 1, y: 1}
 --- !u!61 &1185914189
@@ -1763,8 +1765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf32954d14b1b34199bf3dde46b1f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHovered: 0
-  cursorTexture: {fileID: 0}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
 --- !u!61 &1353905694
@@ -2342,6 +2344,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
+      propertyPath: invDialogue.names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
+      propertyPath: invDialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
+      propertyPath: invDialogue.names.Array.data[0]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
+      propertyPath: invDialogue.names.Array.data[1]
+      value: Victoria
+      objectReference: {fileID: 0}
+    - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[0]
+      value: A stick I found in central park.
+      objectReference: {fileID: 0}
+    - target: {fileID: 774879774462319488, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
+      propertyPath: invDialogue.sentences.Array.data[1]
+      value: Maybe I can use it to get something out of my reach...
+      objectReference: {fileID: 0}
     - target: {fileID: 774879774462319489, guid: ad56dad61c12b5b43868b3fad2ec2c27, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.25818884
@@ -2410,7 +2436,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    names: []
+    names:
+    - Victoria
+    - Victoria
     sentences:
     - A stick. Very sticky.
     - I'll take it.

@@ -6,8 +6,10 @@ public class LookableManager : MonoBehaviour
 {
     // The list of all lookable objects.
     public Lookable[] lookables;
-    // THe list of all NPC objects.
+    // The list of all NPC objects.
     public NPC[] npcs;
+    // The list of all Pickups
+    public PickUp[] pickUps;
 
     // Cursor Controls
     public Texture2D normalTexture;
@@ -22,9 +24,10 @@ public class LookableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Following code prevents more than one inventory from being created
+        // Finding all of the objects that can be looked at or interacted with.
         lookables = FindObjectsOfType<Lookable>();
         npcs = FindObjectsOfType<NPC>();
+        pickUps = FindObjectsOfType<PickUp>();
 
         // Giving each lookable it's mouse textures.
         for(int i = 0; i < lookables.Length; i++)
@@ -37,6 +40,12 @@ public class LookableManager : MonoBehaviour
         {
             npcs[i].specialTexture = speakTexture;
             npcs[i].normalTexture = normalTexture;
+        }
+        // Giving each pickup it's textures.
+        for (int i = 0; i < pickUps.Length; i++)
+        {
+            pickUps[i].specialTexture = searchTexture;
+            pickUps[i].normalTexture = normalTexture;
         }
     }
 }

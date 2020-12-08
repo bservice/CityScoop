@@ -125,6 +125,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Mitten
   interObjRef: {fileID: 0}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
+  invDialogue:
+    names:
+    - Victoria
+    - Victoria
+    sentences:
+    - 
+    - 
+    people: []
 --- !u!82 &8913742884306408965
 AudioSource:
   m_ObjectHideFlags: 0

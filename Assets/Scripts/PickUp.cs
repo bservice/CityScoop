@@ -22,6 +22,9 @@ public class PickUp : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotSpot = Vector2.zero;
 
+    // Dialogue for the item once it's in the inventory.
+    public Dialogue invDialogue;
+
     public string Name
     {
         get { return name; }
@@ -79,10 +82,12 @@ public class PickUp : MonoBehaviour
                         //If the item is clicked on again after it's been added to the inventory, remove it
                         if (added)
                         {
-                            transform.position = new Vector2(100.0f, 100.0f);
+                            //transform.position = new Vector2(100.0f, 100.0f);  Commenting this out so that players don't accidentally delete their items.
                             if (interObjRef != null)
                                 interObjRef.Temp = this;
-                            inventory.RemoveItem(this);
+                            //inventory.RemoveItem(this);  Commenting this out so that players don't accidentally delete their items.
+                            // Adding fun dialogue instead!
+                            FindObjectOfType<DialogueManager>().StartDialogue(invDialogue);
                         }
                         else
                         {
@@ -265,5 +270,16 @@ public class PickUp : MonoBehaviour
 
         }
         Debug.Log("HIT ZONE");
+    }
+
+    // Cursor changers
+    void OnMouseEnter()
+    {
+        Cursor.SetCursor(specialTexture, hotSpot, cursorMode);
+    }
+
+    void OnMouseExit()
+    {
+        Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
     }
 }

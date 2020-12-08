@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fd2983dcfc46c84ab5bda24a55edf96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conditionalBools: 
 --- !u!1001 &158992192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -691,8 +692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf32954d14b1b34199bf3dde46b1f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHovered: 0
-  cursorTexture: {fileID: 0}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
 --- !u!1001 &902339050
@@ -1357,8 +1358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bf32954d14b1b34199bf3dde46b1f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHovered: 0
-  cursorTexture: {fileID: 0}
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
 --- !u!114 &1167313862
@@ -1506,9 +1507,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookables: []
-  isHovered: 0
+  npcs: []
+  pickUps: []
+  inventory: {fileID: 0}
   normalTexture: {fileID: 2800000, guid: 6e7adbf581b042e4194fbe1afbbbd19f, type: 3}
-  hoverTexture: {fileID: 2800000, guid: 9b32a059d02675449ab733891db61322, type: 3}
+  searchTexture: {fileID: 2800000, guid: 9f59e670abb736d4a9aab3a9f0ac8931, type: 3}
+  speakTexture: {fileID: 2800000, guid: fcb4d876446f22f479af2cb372120c99, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
   pauseMenu: {fileID: 1059837339}

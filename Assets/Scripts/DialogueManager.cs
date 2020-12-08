@@ -20,13 +20,13 @@ public class DialogueManager : MonoBehaviour
 
     // All of the lookable objects
     private LookableManager look;
-    // All of the pickups
     // All of the buttons.
     private Button[] buttons;
 
 
     // Cursor Controls
-    public Texture2D cursorTexture;
+    public Texture2D specialTexture;
+    public Texture2D normalTexture;
     public CursorMode cursorMode = CursorMode.ForceSoftware;
     public Vector2 hotSpot = Vector2.zero;
 
@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
             if (inDialogue)
             {
                 // Changes the cursor to the dialogue one.
-                Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
+                Cursor.SetCursor(specialTexture, hotSpot, cursorMode);
             }
         }
     }
@@ -192,5 +192,8 @@ public class DialogueManager : MonoBehaviour
 
         // Dialogue done.
         inDialogue = false;
+
+        // Changes the cursor to the normal one.
+        Cursor.SetCursor(normalTexture, hotSpot, cursorMode);
     }
 }
