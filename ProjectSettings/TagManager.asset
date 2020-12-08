@@ -41,13 +41,9 @@ TagManager:
   - t_RC
   - t_Radio
   - t_Person
-  - t_water
   - t_HoldDown
   - t_Pixi
   - t_Touch
-  - t_Incident
-  - t_Destination
-  - t_Certification
   - t_Kid
   - t_Bird
   - t_Dog
@@ -57,13 +53,14 @@ TagManager:
   - t_Push
   - t_Child
   - t_Energy
-  - t_Telescope
-  - t_Ducks
-  - t_Arcade
   - t_LightSource
   - t_Read
   - t_Lost
   - t_Collects
+  - GardenKey
+  - BathroomKey
+  - t_Bathroom
+  - t_Garden
   layers:
   - Default
   - TransparentFX

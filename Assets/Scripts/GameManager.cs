@@ -8,6 +8,16 @@ public class GameManager : MonoBehaviour
     //Array to hold the managers, this will be used to keep it at one
     private GameManager[] allManagers;
 
+    //End Condition
+    bool hasTomatoe = false;
+    bool hasPizzaBox = false;
+    bool hasCheese = false;
+    bool hasWater = false;
+    bool pizzaMade = false;
+    int counter = 0;
+
+    DialogueManager dialogueManager;
+
     /* Conditional Booleans */
     // Easier to have a list of bools than seperate bools.
     // Each place in the list represents a different condition:
@@ -35,6 +45,8 @@ public class GameManager : MonoBehaviour
         {
             conditionalBools[i] = false;
         }
+
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     // Update is called once per frame
@@ -51,5 +63,32 @@ public class GameManager : MonoBehaviour
                 break;
         }
         */
+
+        //If you have all the pieces
+        if (hasCheese && hasPizzaBox && hasTomatoe && hasWater)
+        {
+            //If you are in the bathroom
+            if (SceneManager.GetActiveScene().name == "Bathroom")
+            {
+                //You win
+                pizzaMade = true;
+            }
+        }
+
+        //If you have the pizza made and you are in the pizzeria
+        if(pizzaMade && SceneManager.GetActiveScene().name == "Pizzeria")
+        {
+            counter++;
+            //Play Dialouge
+
+
+
+            //Play Credits
+            if(dialogueManager.inDialogue == false && counter > 600)
+            {
+                SceneManager.LoadScene("Credits");
+            }
+            
+        }
     }
 }
