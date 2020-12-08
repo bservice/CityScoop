@@ -7,6 +7,9 @@ public class PickUp : MonoBehaviour
     public string name;
     private Inventory inventory;
     public InteractingObjects interObjRef;
+    public GameManager gManager;
+
+    public bool frozen = false;
 
     Vector2 cursorPosition;
 
@@ -46,6 +49,10 @@ public class PickUp : MonoBehaviour
         pauseMenu = FindObjectOfType<PauseTest>();
         added = false;
         soundEffect = GetComponent<AudioSource>();
+
+        if (this.tag == "Ball") { frozen = true; }
+
+        gManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -54,8 +61,28 @@ public class PickUp : MonoBehaviour
         if (!pauseMenu.Paused)
         {
             CheckForClick();
-            UseItem("Soda","Target");
+            if (this.tag == "Soda") { UseItem("Soda", "Target"); }
+
+            if (this.tag == "Stick") { UseItem(this.tag, "t_Tree"); }
+
+            if (this.tag == "Ball")
+            {
+                if(!this.frozen && this.transform.position.y > -0.25)
+                {
+                    Vector3 newY = this.transform.position;
+                    newY.y -= 0.01f;
+                    this.transform.position = newY;
+                }
+
+                UseItem("Ball", "Target"); 
+            }
         }
+
+        if (inventory.HaveItem("Cheese"))
+        {
+            gManager.hasCheese = true;
+        }
+        Debug.Log(gManager.hasCheese);
     }
 
     //Method to check for click
@@ -68,7 +95,7 @@ public class PickUp : MonoBehaviour
             cursorPosition = Camera.main.ScreenToWorldPoint(cursorPosition);
 
             //Selection for objects
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && !this.frozen)
             {
                 //AABB collision test for cursor
                 if (cursorPosition.x < this.GetComponent<BoxCollider2D>().bounds.max.x && cursorPosition.x > this.GetComponent<BoxCollider2D>().bounds.min.x)
@@ -138,7 +165,7 @@ public class PickUp : MonoBehaviour
         cursorPosition = Camera.main.ScreenToWorldPoint(cursorPosition);
 
         //Selection for objects
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && !this.frozen)
         {
             //AABB collision test for cursor
             if (cursorPosition.x < this.GetComponent<BoxCollider2D>().bounds.max.x && cursorPosition.x > this.GetComponent<BoxCollider2D>().bounds.min.x)
@@ -170,10 +197,11 @@ public class PickUp : MonoBehaviour
     //To pull an item from your inventory to use or of the ground using tags
     public void UseItem(string itemTag, string targetTag)
     {
-        if(!inventory.HaveItem(this.name))
+        if (!inventory.HaveItem(this.name))
         {
             //Debug.Log("HIT return");
             //return;
+            //pos = this.transform.position;
         }
 
         //To store the mouses position
@@ -187,7 +215,7 @@ public class PickUp : MonoBehaviour
         taggedItem = GameObject.FindWithTag(targetTag);
 
         //Selection for objects
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && !this.frozen)
         {
             //AABB collision test for cursor
             if (cursorPosition.x < this.GetComponent<BoxCollider2D>().bounds.max.x && cursorPosition.x > this.GetComponent<BoxCollider2D>().bounds.min.x)
@@ -229,6 +257,11 @@ public class PickUp : MonoBehaviour
             case "Apple":
                 break;
             case "Stick":
+                PickUp[] items = FindObjectsOfType<PickUp>();
+                for(int i = 0; i < items.Length; i++)
+                {
+                    if(items[i].tag == "Ball") { items[i].frozen = false; }
+                }
                 break;
             case "Camera":
                 break;
@@ -261,7 +294,6 @@ public class PickUp : MonoBehaviour
             case "Cookie":
                 break;
             case "Soda":
-                Debug.Log("HIT ZONE SODA");
                 break;
             case "Crowbar":
                 break;
@@ -272,6 +304,10 @@ public class PickUp : MonoBehaviour
             case "Quarters":
                 break;
             case "Ball":
+                break;
+            case "GardenKey":
+                break;
+            case "BathroomKey":
                 break;
             default:
                 break;
