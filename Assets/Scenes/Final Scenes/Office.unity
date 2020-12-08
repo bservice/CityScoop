@@ -582,9 +582,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookables: []
   npcs: []
-  isHovered: 0
+  pickUps: []
   normalTexture: {fileID: 2800000, guid: 6e7adbf581b042e4194fbe1afbbbd19f, type: 3}
-  hoverTexture: {fileID: 2800000, guid: 9b32a059d02675449ab733891db61322, type: 3}
+  searchTexture: {fileID: 2800000, guid: 9f59e670abb736d4a9aab3a9f0ac8931, type: 3}
+  speakTexture: {fileID: 2800000, guid: fcb4d876446f22f479af2cb372120c99, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
   pauseMenu: {fileID: 1025190602}
@@ -794,7 +795,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1264975731}
   sprites: []
   animator: {fileID: 962939526}
-  cursorTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
+  specialTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
+  normalTexture: {fileID: 2800000, guid: 6e7adbf581b042e4194fbe1afbbbd19f, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
   pauseMenu: {fileID: 1025190602}
@@ -1743,6 +1745,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00864f8f998b6c4fa0e1085091542ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conditionsThatChangeDialogue: 
+  dialogues: []
+  specialTexture: {fileID: 0}
+  normalTexture: {fileID: 0}
+  cursorMode: 0
+  hotSpot: {x: 0, y: 0}
 --- !u!61 &1339449418
 BoxCollider2D:
   m_ObjectHideFlags: 0

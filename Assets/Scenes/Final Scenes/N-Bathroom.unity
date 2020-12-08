@@ -315,7 +315,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1070852898}
-  - {fileID: 1407028023}
   - {fileID: 1558182353}
   - {fileID: 1947846213}
   m_Father: {fileID: 0}
@@ -1144,7 +1143,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1497115901}
   sprites: []
   animator: {fileID: 25737463}
-  cursorTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
+  specialTexture: {fileID: 2800000, guid: 3532341cf62131041af556129958d8ba, type: 3}
+  normalTexture: {fileID: 2800000, guid: 6e7adbf581b042e4194fbe1afbbbd19f, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
   pauseMenu: {fileID: 1947846214}
@@ -1290,50 +1290,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1407028022
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1407028023}
-  - component: {fileID: 1407028024}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1407028023
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407028022}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.079437, y: -0.2963679, z: 1.9897523}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 283527081}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1407028024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407028022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fd2983dcfc46c84ab5bda24a55edf96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conditionalBools: 
 --- !u!1 &1497115900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1418,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 283527081}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1558182354
 MonoBehaviour:
@@ -1478,9 +1434,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookables: []
   npcs: []
-  isHovered: 0
+  pickUps: []
   normalTexture: {fileID: 2800000, guid: 6e7adbf581b042e4194fbe1afbbbd19f, type: 3}
-  hoverTexture: {fileID: 2800000, guid: 9b32a059d02675449ab733891db61322, type: 3}
+  searchTexture: {fileID: 2800000, guid: 9f59e670abb736d4a9aab3a9f0ac8931, type: 3}
+  speakTexture: {fileID: 2800000, guid: fcb4d876446f22f479af2cb372120c99, type: 3}
   cursorMode: 1
   hotSpot: {x: 0, y: 0}
   pauseMenu: {fileID: 1947846214}
@@ -1617,7 +1574,7 @@ Transform:
   - {fileID: 417903199}
   - {fileID: 311379865}
   m_Father: {fileID: 283527081}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1947846214
 MonoBehaviour:
