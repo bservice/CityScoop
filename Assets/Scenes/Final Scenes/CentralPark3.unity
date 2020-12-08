@@ -1933,7 +1933,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    names: []
+    names:
+    - Victoria
+    - Victoria
     sentences:
     - Looks like a bathroom key.
     - I'll take it.

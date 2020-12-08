@@ -14,6 +14,7 @@ public class Button : MonoBehaviour
     public string sceneName;
 
     private PauseTest pauseMenu;
+    private Inventory inventory;
 
     public bool Clicked
     {
@@ -42,6 +43,7 @@ public class Button : MonoBehaviour
     {
         clicked = false;
         pauseMenu = FindObjectOfType<PauseTest>();
+        inventory = FindObjectOfType<Inventory>();
         if(pauseMenu == null)
         {
             pauseMenu = new PauseTest();
@@ -52,7 +54,60 @@ public class Button : MonoBehaviour
     void Update()
     {
         if(!pauseMenu.Paused)
-        CheckForClick();
+        {
+            switch(sceneName)
+            {
+                case "Bathroom":
+                    if (inventory.HaveItem("Bathroom Key"))
+                    {
+                        CheckForClick();
+                    }
+                    break;
+                case "Office":
+                    CheckForClick();
+                    break;
+                case "OfficeFront":
+                    CheckForClick();
+                    break;
+                case "CentralPark1":
+                    CheckForClick();
+                    break;
+                case "CentralPark2":
+                    CheckForClick();
+                    break;
+                case "CentralPark3":
+                    CheckForClick();
+                    break;
+                case "Street":
+                    CheckForClick();
+                    break;
+                case "Gardner'sShed":
+                    CheckForClick();
+                    break;
+                case "N-CentralPark1":
+                    CheckForClick();
+                    break;
+                case "N-CentralPark2":
+                    CheckForClick();
+                    break;
+                case "N-CentralPark3":
+                    CheckForClick();
+                    break;
+                case "N-Bathroom":
+                    CheckForClick();
+                    break;
+                case "Subway":
+                    CheckForClick();
+                    break;
+                case "N-Subway":
+                    CheckForClick();
+                    break;
+                case "Pizzeria":
+                    CheckForClick();
+                    break;
+            }            
+        }
+        
     }
 
     public void CheckForClick()
