@@ -82,7 +82,10 @@ public class Button : MonoBehaviour
                     CheckForClick();
                     break;
                 case "Gardner'sShed":
-                    CheckForClick();
+                    if (inventory.HaveItem("Garden Key"))
+                    {
+                        CheckForClick();
+                    }
                     break;
                 case "N-CentralPark1":
                     CheckForClick();
