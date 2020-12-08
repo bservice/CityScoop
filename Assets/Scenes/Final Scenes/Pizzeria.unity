@@ -2442,8 +2442,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00864f8f998b6c4fa0e1085091542ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditionsThatChangeDialogue: 
-  dialogues: []
+  conditionsThatChangeDialogue: 05000000
+  dialogues:
+  - names:
+    - Boss
+    sentences:
+    - What are you wating for? Go talk to her.
+    people:
+    - {fileID: 484365452}
+    - {fileID: 2106446437}
   specialTexture: {fileID: 0}
   normalTexture: {fileID: 0}
   cursorMode: 0
@@ -2504,7 +2511,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 38e63b67def5b034baeef8a8720855db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
