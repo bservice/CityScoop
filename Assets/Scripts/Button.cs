@@ -108,6 +108,9 @@ public class Button : MonoBehaviour
                 case "Pizzeria":
                     CheckForClick();
                     break;
+                default:
+                    CheckForClick();
+                    break;
             }            
         }
         
