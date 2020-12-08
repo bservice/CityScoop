@@ -249,10 +249,8 @@ public class PickUp : MonoBehaviour
                 PickUp[] items = FindObjectsOfType<PickUp>();
                 for(int i = 0; i < items.Length; i++)
                 {
-                    if(items[i].tag == "Ball") { items[i].frozen = false; Debug.Log(items[i].frozen); }
+                    if(items[i].tag == "Ball") { items[i].frozen = false; }
                 }
-                //PickUp.FindGameObjectWithTag("Ball").frozen = false;
-                Debug.Log("HIT");
                 break;
             case "Camera":
                 break;
@@ -285,7 +283,6 @@ public class PickUp : MonoBehaviour
             case "Cookie":
                 break;
             case "Soda":
-                Debug.Log("HIT ZONE SODA");
                 break;
             case "Crowbar":
                 break;
