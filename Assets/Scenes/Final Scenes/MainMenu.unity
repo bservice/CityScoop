@@ -578,6 +578,7 @@ MonoBehaviour:
   sceneButtons: []
   button: {fileID: 8300000, guid: c92b991032e65de4fb66922901611244, type: 3}
   walk: {fileID: 8300000, guid: 7b57e9549953aa14bb361903517e0754, type: 3}
+  portal: {fileID: 8300000, guid: 89e05e967e594ea42b49ac6e0df79863, type: 3}
 --- !u!1 &1974445117
 GameObject:
   m_ObjectHideFlags: 0
