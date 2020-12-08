@@ -19,7 +19,7 @@ public class NPC : MonoBehaviour
     public Vector2 hotSpot = Vector2.zero;
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         // For each of the conditions that will change this NPCs dialogue...
         for(int i = 0; i < conditionsThatChangeDialogue.Length; i++)
