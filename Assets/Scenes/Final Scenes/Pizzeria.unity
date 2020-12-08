@@ -918,12 +918,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484365452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.1700001, y: 0.1027946, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574718681
 GameObject:
@@ -1540,8 +1540,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00864f8f998b6c4fa0e1085091542ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditionsThatChangeDialogue: 
-  dialogues: []
+  conditionsThatChangeDialogue: 06000000
+  dialogues:
+  - names:
+    - Employee
+    sentences:
+    - That's all I have for you.
+    people:
+    - {fileID: 484365452}
+    - {fileID: 1488244748}
+    conditionToChange: 0
   specialTexture: {fileID: 0}
   normalTexture: {fileID: 0}
   cursorMode: 0
@@ -1591,7 +1599,7 @@ MonoBehaviour:
     people:
     - {fileID: 484365452}
     - {fileID: 1488244748}
-    conditionToChange: -1
+    conditionToChange: 6
 --- !u!61 &1087076318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2046,7 +2054,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1561298674
 PrefabInstance:
