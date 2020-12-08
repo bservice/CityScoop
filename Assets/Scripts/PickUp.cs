@@ -116,7 +116,7 @@ public class PickUp : MonoBehaviour
         {
             if (!added)
             {
-                GetComponent<SpriteRenderer>().enabled = false;
+                //GetComponent<SpriteRenderer>().enabled = false;
                 GetComponent<DialogueTrigger>().TriggerDialogue();
             }
         }
