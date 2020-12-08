@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour
 
 
             //Play Credits
-            if(dialogueManager.inDialogue == false && counter > 600)
+            if(/*dialogueManager.inDialogue == false &&*/ counter > 600)
             {
                 SceneManager.LoadScene("Credits");
             }

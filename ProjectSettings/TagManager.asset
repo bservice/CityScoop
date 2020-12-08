@@ -50,6 +50,7 @@ TagManager:
   - t_Garden
   - PizzaBox
   - Tomato
+  - Water
   layers:
   - Default
   - TransparentFX

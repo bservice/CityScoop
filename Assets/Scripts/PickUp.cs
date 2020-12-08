@@ -94,7 +94,11 @@ public class PickUp : MonoBehaviour
         {
             gManager.hasPizzaBox = true;
         }
-        Debug.Log(gManager.hasTomatoe);
+        if (inventory.HaveItem("Water Sludge"))
+        {
+            gManager.hasWater = true;
+        }
+        Debug.Log(gManager.hasWater);
     }
 
     //Method to check for click
