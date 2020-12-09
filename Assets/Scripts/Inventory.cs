@@ -47,6 +47,7 @@ public class Inventory : MonoBehaviour
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
 
+        if(badge != null)
         DontDestroyOnLoad(badge);
     }
 
