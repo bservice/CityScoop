@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
             //If you are in the bathroom
             if (SceneManager.GetActiveScene().name == "Bathroom")
             {
-                //You win
+                //Pizza win
                 pizzaMade = true;
             }
         }

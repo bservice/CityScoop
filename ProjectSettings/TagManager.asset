@@ -54,6 +54,11 @@ TagManager:
   - Cup
   - t_badge
   - Badge
+  - t_GreenFairy
+  - Wrench
+  - t_MechanicFairy
+  - t_Web
+  - Scissors
   layers:
   - Default
   - TransparentFX
