@@ -52,6 +52,7 @@ public class EnterScene : MonoBehaviour
         if(numLines >= numLinesBeforeBackgroundChange)
         {
             // Disable the darkness.
+            if(darkness != null)
             darkness.GetComponent<SpriteRenderer>().enabled = false;
         }
     }

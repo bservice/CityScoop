@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     //  8 - Whether or not you've seen Doodle's cup
     //  9 - Whether or not you've finished talking to doodle
     //  10 - Whether or not you've shown your badge
+    //  11 - Whether or not you've entered central park a never never
     public bool[] conditionalBools;
 
     // Start is called before the first frame update
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        conditionalBools = new bool[11];
+        conditionalBools = new bool[12];
         for(int i = 0; i < conditionalBools.Length; i++)
         {
             conditionalBools[i] = false;
