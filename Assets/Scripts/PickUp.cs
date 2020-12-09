@@ -327,7 +327,8 @@ public class PickUp : MonoBehaviour
 
                 break;
             case "Mitten":
-                //Green Fairy interaction
+                //Orange Fairy interaction
+                gManager.conditionalBools[13] = true;
                 Debug.Log("HIT");
 
                 break;
