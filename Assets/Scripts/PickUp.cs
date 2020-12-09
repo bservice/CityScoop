@@ -311,6 +311,7 @@ public class PickUp : MonoBehaviour
                 {
                     if (itemss[i].tag == "Screwdriver") { itemss[i].frozen = false; }
                 }
+                gManager.conditionalBools[15] = true;
                 break;
             case "Glasses":
                 break;

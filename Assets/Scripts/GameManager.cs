@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        conditionalBools = new bool[15];
+        conditionalBools = new bool[16];
         for(int i = 0; i < conditionalBools.Length; i++)
         {
             conditionalBools[i] = false;
