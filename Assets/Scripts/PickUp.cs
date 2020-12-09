@@ -51,7 +51,7 @@ public class PickUp : MonoBehaviour
         added = false;
         soundEffect = GetComponent<AudioSource>();
 
-        if (this.tag == "Ball") { frozen = true; }
+        if (this.tag == "Ball" || this.tag == "Screwdriver") { frozen = true; }
 
         gManager = FindObjectOfType<GameManager>();
 
@@ -71,13 +71,15 @@ public class PickUp : MonoBehaviour
 
             if (this.tag == "Stick") { UseItem(this.tag, "t_Tree"); }
 
+            if (this.tag == "Wrench") { UseItem(this.tag, "t_MechanicFairy"); }
+
             if (this.tag == "Mitten") { UseItem(this.tag, "t_GreenFairy"); }
 
             if (this.tag == "Wrench") { UseItem(this.tag, "t_MechanicFairy"); }
 
             if (this.tag == "Scissors") { UseItem(this.tag, "t_Web"); }
 
-            if (this.tag == "Ball")
+            if (this.tag == "Ball" || this.tag == "Screwdriver")
             {
                 if(!this.frozen && this.transform.position.y > -0.25)
                 {
@@ -87,6 +89,7 @@ public class PickUp : MonoBehaviour
                 }
 
                 UseItem("Ball", "Target"); 
+                UseItem("Screwdriver", "Target"); 
             }
         }
 
@@ -301,7 +304,11 @@ public class PickUp : MonoBehaviour
             case "Wrench":
                 //Mechanic Fairy interaction
                 //Drops screwdriver
-
+                PickUp[] itemss = FindObjectsOfType<PickUp>();
+                for (int i = 0; i < itemss.Length; i++)
+                {
+                    if (itemss[i].tag == "Screwdriver") { itemss[i].frozen = false; }
+                }
                 break;
             case "Glasses":
                 break;
@@ -344,7 +351,9 @@ public class PickUp : MonoBehaviour
             case "Papers":
                 break;
             case "Screwdriver":
-                    break;
+                //FFFFFFFFFFFFFFFFFF
+
+                break;
             case "Quarters":
                 break;
             case "Ball":
