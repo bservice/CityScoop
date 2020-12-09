@@ -17,7 +17,7 @@ public class EnterScene : MonoBehaviour
     public Dialogue dialogue;
     // The position of the conditional variable in the GameManager that will be turned on after this runs
     //  (ensures the dialogue doesn't play EVERY time the scene is entered).
-    public int conditional;
+    public int conditional = -1;
 
     // How many lines before the background changes (if empty, nothing happens).
     public int numLinesBeforeBackgroundChange = 0;
