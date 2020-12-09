@@ -75,6 +75,25 @@ public class GameManager : MonoBehaviour
                 break;
         }
         */
+
+        //Reset conditionals if the main menu is the active scene
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            for (int i = 0; i < conditionalBools.Length; i++)
+            {
+                conditionalBools[i] = false;
+                hasTomatoe = false;
+                hasPizzaBox = false;
+                hasCheese = false;
+                hasWater = false;
+                pizzaMade = false;
+                bossTalkPizza = false;
+                talkedToEmployee = false;
+                talkedToCartman = false;
+                seenCup = false;
+                talkedToDoodle = false;
+            }
+        }
     
         //If you have all the pieces
         if (hasCheese && hasPizzaBox && hasTomatoe && hasWater)
