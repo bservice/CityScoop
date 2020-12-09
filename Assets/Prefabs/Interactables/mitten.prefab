@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8913742884306408965}
   m_Layer: 0
   m_Name: mitten
-  m_TagString: Untagged
+  m_TagString: Mitten
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   interObjRef: {fileID: 0}
   gManager: {fileID: 0}
   frozen: 0
+  talking: 0
   specialTexture: {fileID: 0}
   normalTexture: {fileID: 0}
   cursorMode: 0

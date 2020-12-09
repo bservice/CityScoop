@@ -79,6 +79,8 @@ public class PickUp : MonoBehaviour
 
             if (this.tag == "Scissors") { UseItem(this.tag, "t_Web"); }
 
+            if (this.tag == "Mitten") { UseItem(this.tag, "t_GreenFairy"); }
+
             if (this.tag == "Ball" || this.tag == "Screwdriver")
             {
                 if(!this.frozen && this.transform.position.y > -0.25)
