@@ -36,6 +36,8 @@ public class DialogueManager : MonoBehaviour
     // Whether or not dialogue is happening...
     public bool inDialogue;
 
+    private PickUp[] items;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +48,7 @@ public class DialogueManager : MonoBehaviour
         buttons = FindObjectsOfType<Button>();
         pauseMenu = FindObjectOfType<PauseTest>();
         inDialogue = false;
+        items = FindObjectsOfType<PickUp>();
     }
 
     void Update()
@@ -56,6 +59,21 @@ public class DialogueManager : MonoBehaviour
             {
                 // Changes the cursor to the dialogue one.
                 Cursor.SetCursor(specialTexture, hotSpot, cursorMode);
+            }
+        }
+        
+        if(inDialogue)
+        {
+            for(int i = 0; i < items.Length; i++)
+            {
+                items[i].talking = true;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                items[i].talking = false;
             }
         }
     }

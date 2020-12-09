@@ -10,6 +10,7 @@ public class PickUp : MonoBehaviour
     public GameManager gManager;
 
     public bool frozen = false;
+    public bool talking = false;
 
     Vector2 cursorPosition;
 
@@ -61,7 +62,7 @@ public class PickUp : MonoBehaviour
         if (!pauseMenu.Paused)
         {
             CheckForClick();
-            if (this.tag == "Soda") { UseItem("Soda", "Target"); }
+            if (this.tag == "Badge") { UseItem("Badge", "t_badge"); }
 
             if (this.tag == "Stick") { UseItem(this.tag, "t_Tree"); }
 
@@ -111,7 +112,7 @@ public class PickUp : MonoBehaviour
             cursorPosition = Camera.main.ScreenToWorldPoint(cursorPosition);
 
             //Selection for objects
-            if (Input.GetMouseButtonDown(0) && !this.frozen)
+            if (Input.GetMouseButtonDown(0) && !this.frozen && !this.talking)
             {
                 //AABB collision test for cursor
                 if (cursorPosition.x < this.GetComponent<BoxCollider2D>().bounds.max.x && cursorPosition.x > this.GetComponent<BoxCollider2D>().bounds.min.x)
@@ -231,7 +232,7 @@ public class PickUp : MonoBehaviour
         taggedItem = GameObject.FindWithTag(targetTag);
 
         //Selection for objects
-        if (Input.GetMouseButton(1) && !this.frozen)
+        if (Input.GetMouseButton(1) && !this.frozen && !this.talking)
         {
             //AABB collision test for cursor
             if (cursorPosition.x < this.GetComponent<BoxCollider2D>().bounds.max.x && cursorPosition.x > this.GetComponent<BoxCollider2D>().bounds.min.x)
@@ -268,7 +269,7 @@ public class PickUp : MonoBehaviour
                 break;
             case "Baseball":
                 break;
-            case "Car":
+            case "RC":
                 break;
             case "Apple":
                 break;
@@ -285,7 +286,9 @@ public class PickUp : MonoBehaviour
                 break;
             case "Flashlight":
                 break;
-            case "MoneyKey":
+            case "Badge":
+                //Employee Dialogue
+
                 break;
             case "HouseKey":
                 break;

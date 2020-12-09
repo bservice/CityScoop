@@ -51,6 +51,9 @@ TagManager:
   - PizzaBox
   - Tomato
   - Water
+  - Cup
+  - t_badge
+  - Badge
   layers:
   - Default
   - TransparentFX
