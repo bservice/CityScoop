@@ -18,6 +18,8 @@ public class EnterScene : MonoBehaviour
     // The position of the conditional variable in the GameManager that will be turned on after this runs
     //  (ensures the dialogue doesn't play EVERY time the scene is entered).
     public int conditional = -1;
+    // The condition that needs to be met before this plays.
+    public int preConditional = -1;
 
     // How many lines before the background changes (if empty, nothing happens).
     public int numLinesBeforeBackgroundChange = 0;
@@ -29,20 +31,41 @@ public class EnterScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // If this dialogue has never been displayed...
-        if (FindObjectOfType<GameManager>().conditionalBools[conditional] == false)
+        if(preConditional > -1)
         {
-            // If the user wants the background to change...
-            if (numLinesBeforeBackgroundChange > 0)
+            // If this dialogue has never been displayed and the condition is met...
+            if (FindObjectOfType<GameManager>().conditionalBools[conditional] == false && FindObjectOfType<GameManager>().conditionalBools[preConditional] == true)
             {
-                // Enable the darkness.
-                darkness.GetComponent<SpriteRenderer>().enabled = true;
-            }
+                // If the user wants the background to change...
+                if (numLinesBeforeBackgroundChange > 0)
+                {
+                    // Enable the darkness.
+                    darkness.GetComponent<SpriteRenderer>().enabled = true;
+                }
 
-            // Start the dialogue.
-            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            // Mark that the condition has been met so it doesn't play again.
-            FindObjectOfType<GameManager>().conditionalBools[conditional] = true;
+                // Start the dialogue.
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                // Mark that the condition has been met so it doesn't play again.
+                FindObjectOfType<GameManager>().conditionalBools[conditional] = true;
+            }
+        }
+        else 
+        {
+            // If this dialogue has never been displayed...
+            if (FindObjectOfType<GameManager>().conditionalBools[conditional] == false)
+            {
+                // If the user wants the background to change...
+                if (numLinesBeforeBackgroundChange > 0)
+                {
+                    // Enable the darkness.
+                    darkness.GetComponent<SpriteRenderer>().enabled = true;
+                }
+
+                // Start the dialogue.
+                FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+                // Mark that the condition has been met so it doesn't play again.
+                FindObjectOfType<GameManager>().conditionalBools[conditional] = true;
+            }
         }
     }
 
