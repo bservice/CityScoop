@@ -328,6 +328,7 @@ public class PickUp : MonoBehaviour
                 break;
             case "Mitten":
                 //Green Fairy interaction
+                Debug.Log("HIT");
 
                 break;
             case "Pizza":
