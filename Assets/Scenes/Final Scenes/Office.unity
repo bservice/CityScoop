@@ -1723,6 +1723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Badge
       objectReference: {fileID: 0}
+    - target: {fileID: 8778442773141098259, guid: bb2db97fabba24241900f391d16e585d, type: 3}
+      propertyPath: m_TagString
+      value: Badge
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb2db97fabba24241900f391d16e585d, type: 3}
 --- !u!1 &1324309493 stripped

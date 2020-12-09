@@ -288,7 +288,7 @@ public class PickUp : MonoBehaviour
                 break;
             case "Badge":
                 //Employee Dialogue
-
+                Debug.Log("HIT");
                 break;
             case "HouseKey":
                 break;
