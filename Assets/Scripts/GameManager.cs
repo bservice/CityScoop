@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public bool pizzaMade = false;
     public bool bossTalkPizza = false;
     public bool talkedToEmployee = false;
+    public bool talkedToCartman = false;
+    public bool seenCup = false;
+    public bool talkedToDoodle = false;
     int counter = 0;
 
     DialogueManager dialogueManager;
@@ -32,6 +35,7 @@ public class GameManager : MonoBehaviour
     //  6 - Whether or not you've talked to employee in the pizzeria
     //  7 - Whether or not you've talked to cartman and got his story
     //  8 - Whether or not you've seen Doodle's cup
+    //  9 - Whether or not you've finished talking to doodle
     public bool[] conditionalBools;
 
     // Start is called before the first frame update
@@ -46,7 +50,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        conditionalBools = new bool[9];
+        conditionalBools = new bool[10];
         for(int i = 0; i < conditionalBools.Length; i++)
         {
             conditionalBools[i] = false;
