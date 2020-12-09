@@ -1833,9 +1833,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2073334751}
   - component: {fileID: 2073334750}
+  - component: {fileID: 2073334752}
   - component: {fileID: 2073334754}
   - component: {fileID: 2073334753}
-  - component: {fileID: 2073334752}
   m_Layer: 0
   m_Name: GreenWorld
   m_TagString: Untagged
