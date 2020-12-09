@@ -18,10 +18,12 @@ public class GameManager : MonoBehaviour
     public bool talkedToEmployee = false;
     public bool talkedToCartman = false;
     public bool seenCup = false;
-    public bool talkedToDoodle = false;
+    public bool dropBar = false;
     int counter = 0;
 
     DialogueManager dialogueManager;
+
+    private PickUp[] items;
 
     /* Conditional Booleans */
     // Easier to have a list of bools than seperate bools.
@@ -39,6 +41,8 @@ public class GameManager : MonoBehaviour
     //  10 - Whether or not you've shown your badge
     //  11 - Whether or not you've entered central park a never never
     //  12 - Whether or not you've talked to chicago fairy
+    //  13 - Whether or not you've given orange the mitten
+    //  14 - Whether or not you've talked to orange after
     public bool[] conditionalBools;
 
     // Start is called before the first frame update
@@ -53,13 +57,14 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this.gameObject);
-        conditionalBools = new bool[13];
+        conditionalBools = new bool[15];
         for(int i = 0; i < conditionalBools.Length; i++)
         {
             conditionalBools[i] = false;
         }
 
         dialogueManager = FindObjectOfType<DialogueManager>();
+        items = FindObjectsOfType<PickUp>();
     }
 
     // Update is called once per frame
@@ -76,6 +81,18 @@ public class GameManager : MonoBehaviour
                 break;
         }
         */
+        items = FindObjectsOfType<PickUp>();
+        if (conditionalBools[14])
+        {
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (items[i].Name == "Crowbar")
+                {
+                    items[i].transform.position = new Vector2(-1.365167f, 0.4749857f);
+                }
+            }
+            conditionalBools[14] = false;
+        }
 
         //Reset conditionals if the main menu is the active scene
         if(SceneManager.GetActiveScene().name == "MainMenu")
@@ -92,7 +109,7 @@ public class GameManager : MonoBehaviour
                 talkedToEmployee = false;
                 talkedToCartman = false;
                 seenCup = false;
-                talkedToDoodle = false;
+                dropBar = false;
             }
         }
     
