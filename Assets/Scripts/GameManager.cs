@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     //  12 - Whether or not you've talked to chicago fairy
     //  13 - Whether or not you've given orange the mitten
     //  14 - Whether or not you've talked to orange after
+    //  15 - Whether or not you've given the crowbar
     public bool[] conditionalBools;
 
     // Start is called before the first frame update
