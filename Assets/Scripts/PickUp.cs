@@ -54,6 +54,11 @@ public class PickUp : MonoBehaviour
         if (this.tag == "Ball") { frozen = true; }
 
         gManager = FindObjectOfType<GameManager>();
+
+        if(pauseMenu == null)
+        {
+            pauseMenu = new PauseTest();
+        }
     }
 
     // Update is called once per frame
@@ -255,6 +260,12 @@ public class PickUp : MonoBehaviour
                         }
                         //Do something with the target zone and/or the object in use
                         HitZone(itemTag);
+                        if (name == "Badge")
+                        {
+                            inventory.AddBadge();
+                        }
+                        added = false;
+                        inventory.RemoveItem(this);
                     }
                 }
             }
@@ -288,7 +299,7 @@ public class PickUp : MonoBehaviour
                 break;
             case "Badge":
                 //Employee Dialogue
-                Debug.Log("HIT");
+                gManager.conditionalBools[10] = true;
                 break;
             case "HouseKey":
                 break;

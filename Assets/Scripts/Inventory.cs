@@ -10,6 +10,8 @@ public class Inventory : MonoBehaviour
     public List<string> removedInventory;
     private PickUp[] items;
 
+    public PickUp badge;
+
     private float invX;
     private float invY;
 
@@ -44,6 +46,8 @@ public class Inventory : MonoBehaviour
 
         //Allows the inventory to be accessed in other scenes
         DontDestroyOnLoad(this);
+
+        DontDestroyOnLoad(badge);
     }
 
     // Update is called once per frame
@@ -227,4 +231,44 @@ public class Inventory : MonoBehaviour
         removedInventory.Clear();
         inventory.Clear();
     }
+
+    public void AddBadge()
+    {
+        badge.Added = true;
+        AddItem(badge);
+        if (inventory.Count > 8)
+        {
+            //If the inventory goes to the next row, run two loops for each row
+            for (int i = 0; i < 8; i++)
+            {
+                DisplayItem(inventory[i], invX, invY, i);
+            }
+            for (int i = 8; i < inventory.Count; i++)
+            {
+                //Set new x and y for the lower row
+                float x = -1.689f;
+                //float y = -1.146f;
+                float y = -1.346f;
+                //Rowcount serves as "i"
+                //Only used because i does not start at 0
+                rowCount++;
+                DisplayItem(inventory[i], x, y, rowCount);
+            }
+            //Reset row count
+            rowCount = 0;
+        }
+        else
+        {
+            //if there is only one row, display as normal
+            invX = -1.689f;
+            //invY = -0.788f;
+            invY = -0.988f;
+            for (int i = 0; i < inventory.Count; i++)
+            {
+                DisplayItem(inventory[i], invX, invY, i);
+            }
+        }
+        SaveList();
+    }
 }
+
