@@ -2104,6 +2104,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: soda
       objectReference: {fileID: 0}
+    - target: {fileID: 7525357737352775766, guid: fa408d5347c820f499fbbed178ae55a2, type: 3}
+      propertyPath: m_TagString
+      value: Cup
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa408d5347c820f499fbbed178ae55a2, type: 3}
 --- !u!1 &1970550192 stripped
