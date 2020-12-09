@@ -345,11 +345,12 @@ MonoBehaviour:
       you!
     - This dream keeps getting weirder. Everyone knows that New York City pizza is
       the best.
-    - "No, no! They don\u2019t! So we gotta prove it! Come with me!"
+    - "No, no! They don\u2019t! So we gotta prove it! Come with me! You now have
+      the power to go to the Nevernever!"
     people:
     - {fileID: 2062210843}
     - {fileID: 1491930598}
-    conditionToChange: -1
+    conditionToChange: 9
   specialTexture: {fileID: 0}
   normalTexture: {fileID: 0}
   cursorMode: 0

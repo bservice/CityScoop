@@ -15,6 +15,7 @@ public class Button : MonoBehaviour
 
     private PauseTest pauseMenu;
     private Inventory inventory;
+    private GameManager gameManager;
 
     public bool Clicked
     {
@@ -44,6 +45,7 @@ public class Button : MonoBehaviour
         clicked = false;
         pauseMenu = FindObjectOfType<PauseTest>();
         inventory = FindObjectOfType<Inventory>();
+        gameManager = FindObjectOfType<GameManager>();
         if(pauseMenu == null)
         {
             pauseMenu = new PauseTest();
@@ -55,6 +57,16 @@ public class Button : MonoBehaviour
     {
         if(!pauseMenu.Paused)
         {
+            if(portalButton && !gameManager.conditionalBools[9])
+            {
+                GetComponent<SpriteRenderer>().enabled = false;
+            }
+            else
+            {
+                CheckForClick();
+                GetComponent<SpriteRenderer>().enabled = true;
+            }
+
             switch(sceneName)
             {
                 case "Bathroom":
@@ -87,14 +99,11 @@ public class Button : MonoBehaviour
                         CheckForClick();
                     }
                     break;
-                case "N-CentralPark1":
-                    CheckForClick();
+                case "N-CentralPark1":                   
                     break;
                 case "N-CentralPark2":
-                    CheckForClick();
                     break;
                 case "N-CentralPark3":
-                    CheckForClick();
                     break;
                 case "N-Bathroom":
                     CheckForClick();
