@@ -367,10 +367,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    names: []
+    names:
+    - Victoria
+    - Victoria
     sentences:
     - A regular baseball. Cool!
-    - I'll take it.
+    - I can't reach it.
     people: []
     conditionToChange: -1
 --- !u!1 &299795468

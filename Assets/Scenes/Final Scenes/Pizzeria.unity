@@ -1699,7 +1699,7 @@ MonoBehaviour:
     - Employee
     sentences:
     - Are you a really a reporter?
-    - Show me your badge
+    - Can you show me your badge, please?
     people:
     - {fileID: 484365452}
     - {fileID: 1488244748}
