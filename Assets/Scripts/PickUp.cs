@@ -330,7 +330,6 @@ public class PickUp : MonoBehaviour
                 break;
 
         }
-        Debug.Log("HIT ZONE");
     }
 
     // Cursor changers
