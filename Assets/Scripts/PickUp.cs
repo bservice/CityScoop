@@ -71,6 +71,12 @@ public class PickUp : MonoBehaviour
 
             if (this.tag == "Stick") { UseItem(this.tag, "t_Tree"); }
 
+            if (this.tag == "Mitten") { UseItem(this.tag, "t_GreenFairy"); }
+
+            if (this.tag == "Wrench") { UseItem(this.tag, "t_MechanicFairy"); }
+
+            if (this.tag == "Scissors") { UseItem(this.tag, "t_Web"); }
+
             if (this.tag == "Ball")
             {
                 if(!this.frozen && this.transform.position.y > -0.25)
@@ -285,13 +291,17 @@ public class PickUp : MonoBehaviour
             case "Apple":
                 break;
             case "Stick":
+                //Ball interaction
                 PickUp[] items = FindObjectsOfType<PickUp>();
                 for(int i = 0; i < items.Length; i++)
                 {
                     if(items[i].tag == "Ball") { items[i].frozen = false; }
                 }
                 break;
-            case "Camera":
+            case "Wrench":
+                //Mechanic Fairy interaction
+                //Drops screwdriver
+
                 break;
             case "Glasses":
                 break;
@@ -304,8 +314,12 @@ public class PickUp : MonoBehaviour
             case "HouseKey":
                 break;
             case "Scissors":
+                //Cuts scissors
+
                 break;
             case "Mitten":
+                //Green Fairy interaction
+
                 break;
             case "Pizza":
                 break;
