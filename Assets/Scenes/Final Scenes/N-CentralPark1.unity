@@ -585,7 +585,7 @@ MonoBehaviour:
     - {fileID: 2121256640}
     - {fileID: 1787344242}
     - {fileID: 0}
-    conditionToChange: -1
+    conditionToChange: 12
 --- !u!114 &255030628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -598,8 +598,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00864f8f998b6c4fa0e1085091542ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  conditionsThatChangeDialogue: 
-  dialogues: []
+  conditionsThatChangeDialogue: 0c000000
+  dialogues:
+  - names:
+    - Chicago Fairy
+    sentences:
+    - You're going down!
+    people:
+    - {fileID: 0}
+    conditionToChange: 0
   specialTexture: {fileID: 0}
   normalTexture: {fileID: 0}
   cursorMode: 0
